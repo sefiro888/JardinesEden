@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardines Edén | Jardinería y Mantenimiento en Rivas-Vaciamadrid</title>
+    <meta name="description" content="Jardines Edén ofrece servicios profesionales de jardinería, instalación y reparación de riego automático, poda, limpieza de terrenos, portales y mantenimiento de comunidades en Rivas-Vaciamadrid y Madrid Este. ¡Pide tu presupuesto personalizado por WhatsApp!">
+    
+    <!-- Preload & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon (Fallback Leaf SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="main-header" id="header">
+        <div class="container header-container">
+            <a href="#inicio" class="logo" id="logo-link">
+                <img src="logo.jpeg" alt="Jardines Edén" class="logo-img-file" onerror="this.src='logo.png'; this.onerror=function(){ this.style.display='none'; document.getElementById('logo-fallback').style.display='flex'; };" style="max-height: 52px; width: auto; object-fit: contain;">
+                <div id="logo-fallback" class="logo-fallback-wrapper" style="display: none; align-items: center; gap: 12px;">
+                    <svg class="logo-icon" width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="100" x2="100" y2="0" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#22823a" />
+                                <stop offset="50%" stop-color="#46a256" />
+                                <stop offset="100%" stop-color="#8ed094" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Regadera -->
+                        <path d="M12 62 H22 V72 H12 Z M22 65 L28 61 V69 L22 67 M10 67 Q6 67 6 70 Q6 73 10 73 H12" stroke="url(#logo-gradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        
+                        <!-- Jardinero Silueta -->
+                        <circle cx="58" cy="20" r="7" fill="url(#logo-gradient)"/>
+                        <!-- Sombrero -->
+                        <path d="M42 19 C48 10 68 10 74 19 C64 13 52 13 42 19 Z" fill="url(#logo-gradient)" />
+                        <path d="M34 21 C44 19 68 19 78 21" stroke="url(#logo-gradient)" stroke-width="2.5" stroke-linecap="round" />
+                        <!-- Cuerpo inclinado -->
+                        <path d="M58 27 Q50 38 42 51 T38 72" stroke="url(#logo-gradient)" stroke-width="7" stroke-linecap="round" fill="none" />
+                        <path d="M52 30 Q60 44 54 58 T50 72" stroke="url(#logo-gradient)" stroke-width="6" stroke-linecap="round" fill="none" />
+                        
+                        <!-- Pala -->
+                        <path d="M35 34 L62 58 M62 58 L68 63 L64 67 L58 62" stroke="url(#logo-gradient)" stroke-width="2.5" stroke-linecap="round" />
+                        <!-- Hoja de pala cavando -->
+                        <path d="M64 67 L74 76 C76 78 72 80 70 80 L58 62" stroke="url(#logo-gradient)" stroke-width="2.5" stroke-linecap="round" fill="url(#logo-gradient)" />
+                        
+                        <!-- Planta creciendo -->
+                        <path d="M82 72 V50" stroke="url(#logo-gradient)" stroke-width="2.5" stroke-linecap="round" />
+                        <!-- Hojas de la planta -->
+                        <path d="M82 62 Q87 59 90 62 Q87 65 82 62 Z" fill="url(#logo-gradient)" />
+                        <path d="M82 55 Q77 52 74 55 Q77 58 82 55 Z" fill="url(#logo-gradient)" />
+                        <path d="M82 47 Q85 43 88 45 Q85 48 82 47 Z" fill="url(#logo-gradient)" />
+                    </svg>
+                    <span class="logo-text">Jardines <span class="accent-text">Edén</span></span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                    <li><a href="index.html#trabajos" class="nav-link">Trabajos</a></li>
+                    <li><a href="porque-elegirnos.html" class="nav-link">Por qué elegirnos</a></li>
+                    <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="https://wa.me/34624885319?text=Hola%2C%20he%20visto%20vuestra%20web%20de%20Jardines%20Ed%C3%A9n%20y%20quiero%20pedir%20presupuesto%20para%20un%20servicio%20de%20jardiner%C3%ADa%20o%20mantenimiento." class="btn btn-primary btn-header" target="_blank" rel="noopener noreferrer" id="btn-header-cta">
+                    <span>Pedir Presupuesto</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación" aria-controls="nav-menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="inicio">
+        <div class="hero-background">
+            <img src="Captura de pantalla 2026-05-25 193239.png" alt="Jardinería profesional en Rivas-Vaciamadrid" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <!-- Hojas flotantes decorativas animadas -->
+        <div class="leaf-particle">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17 8C8 14 4 19 4 19S9 19 15 12C17 9.5 19.5 5 19.5 5S19.5 5 17 8Z" />
+            </svg>
+        </div>
+        <div class="leaf-particle">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17 8C8 14 4 19 4 19S9 19 15 12C17 9.5 19.5 5 19.5 5S19.5 5 17 8Z" />
+            </svg>
+        </div>
+        <div class="leaf-particle">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17 8C8 14 4 19 4 19S9 19 15 12C17 9.5 19.5 5 19.5 5S19.5 5 17 8Z" />
+            </svg>
+        </div>
+        <div class="leaf-particle">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17 8C8 14 4 19 4 19S9 19 15 12C17 9.5 19.5 5 19.5 5S19.5 5 17 8Z" />
+            </svg>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content reveal">
+                <div class="badge-tag">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Servicio en Rivas y Madrid Este</span>
+                </div>
+                <h1 class="hero-title">Cuidamos tu jardín, tu comunidad y tus espacios exteriores en Rivas</h1>
+                <p class="hero-subtitle">Jardinería, riego automático, poda, limpieza de terrenos y mantenimiento de comunidades con atención directa y rápida por WhatsApp.</p>
+                
+                <div class="hero-actions">
+                    <a href="https://wa.me/34624885319?text=Hola%2C%20he%20visto%20vuestra%20web%20de%20Jardines%20Ed%C3%A9n%20y%20quiero%20pedir%20presupuesto%20para%20un%20servicio%20de%20jardiner%C3%ADa%20o%20mantenimiento." class="btn btn-whatsapp btn-large" target="_blank" rel="noopener noreferrer" id="btn-hero-wa">
+                        <svg class="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <span>Presupuesto gratis por WhatsApp</span>
+                    </a>
+                    <a href="#servicios" class="btn btn-outline btn-large" id="btn-hero-services">
+                        <span>Ver servicios</span>
+                    </a>
+                </div>
+                
+                <div class="hero-trust-cards">
+                    <div class="trust-card">
+                        <div class="trust-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="trust-card-info">
+                            <h3 class="trust-card-title">Presupuesto a medida</h3>
+                            <p class="trust-card-desc">Adaptado a tu espacio sin compromiso.</p>
+                        </div>
+                    </div>
+                    <div class="trust-card">
+                        <div class="trust-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="trust-card-info">
+                            <h3 class="trust-card-title">Atención Directa</h3>
+                            <p class="trust-card-desc">Comunicación rápida por WhatsApp.</p>
+                        </div>
+                    </div>
+                    <div class="trust-card">
+                        <div class="trust-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
+                        <div class="trust-card-info">
+                            <h3 class="trust-card-title">Particulares y Comunidades</h3>
+                            <p class="trust-card-desc">Cuidado integral de exteriores y zonas comunes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-badge-float reveal delay-1">
+                <span class="hero-badge-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </span>
+                <div class="hero-badge-content">
+                    <span class="hero-badge-num">100%</span>
+                    <span class="hero-badge-txt">Garantía Local en Rivas</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z" fill="var(--color-bg)"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-section" id="servicios">
+        <!-- Organic Fluid Blob Decorators -->
+        <div class="organic-shape-decorator organic-shape-1"></div>
+        <div class="organic-shape-decorator organic-shape-3"></div>
+        
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-subtitle">Lo que hacemos por ti</span>
+                <h2 class="section-title">Servicios profesionales de jardinería y mantenimiento</h2>
+                <p class="section-description">Mantenemos jardines, zonas verdes y espacios exteriores siempre cuidados, limpios y listos para disfrutar en Rivas-Vaciamadrid y alrededores.</p>
+                 <div class="services-grid">
+                
+                <!-- Servicio 1: Mantenimiento de Jardines -->
+                <div class="service-card reveal">
+                    <div class="service-card-image">
+                        <img src="jardin_despues.png" alt="Mantenimiento de Jardines en Rivas" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-icon-wrapper">
+                            <!-- Custom Garden SVG -->
+                            <svg class="service-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2a15 15 0 0 0-3 9 3 3 0 0 0 6 0 15 15 0 0 0-3-9z"/>
+                                <path d="M3 22h18"/>
+                                <path d="M12 12v10"/>
+                                <path d="M5 14a4 4 0 0 1 4-4"/>
+                                <path d="M19 14a4 4 0 0 0-4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Mantenimiento de Jardines</h3>
+                        <p class="service-text">Corte de césped, perfilado de setos, abonado, control preventivo de plagas y cuidado continuo para que tu jardín luzca impecable todo el año.</p>
+                        <a href="https://wa.me/34624885319?text=Hola%2C%20quiero%20pedir%20presupuesto%20para%20Mantenimiento%20de%20Jardines%20en%20Rivas." class="service-link" target="_blank" rel="noopener noreferrer">
+                            <span>Consultar servicio</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Riego Automático -->
+                <div class="service-card reveal">
+                    <div class="service-card-image">
+                        <img src="riego_automatico.png" alt="Instalación de Riego Automático" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-icon-wrapper">
+                            <!-- Custom Water/Irrigation SVG -->
+                            <svg class="service-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2v20"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                <circle cx="12" cy="2" r="1" fill="currentColor"/>
+                                <path d="M12 6a3 3 0 0 1 3-3"/>
+                                <path d="M12 10a3 3 0 0 0-3-3"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Riego Automático</h3>
+                        <p class="service-text">Diseño, instalación y puesta a punto de sistemas de riego por goteo o aspersión. Programación eficiente para optimizar el consumo de agua.</p>
+                        <a href="https://wa.me/34624885319?text=Hola%2C%20quiero%20pedir%20presupuesto%20para%20instalaci%C3%B3n%20o%20reparaci%C3%B3n%20de%20Riego%20Autom%C3%A1tico." class="service-link" target="_blank" rel="noopener noreferrer">
+                            <span>Consultar servicio</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Poda y Zonas Verdes -->
+                <div class="service-card reveal">
+                    <div class="service-card-image">
+                        <img src="poda_altura.png" alt="Poda de altura y setos" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-icon-wrapper">
+                            <!-- Custom Pruning/Scissors SVG -->
+                            <svg class="service-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="6" cy="6" r="3"/>
+                                <circle cx="6" cy="18" r="3"/>
+                                <line x1="9.8" y1="8.5" x2="20" y2="17"/>
+                                <line x1="9.8" y1="15.5" x2="20" y2="7"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Poda y Cuidado de Zonas Verdes</h3>
+                        <p class="service-text">Poda de altura, perfilado de setos, saneamiento de árboles y arbustos. Eliminación segura de ramas peligrosas o secas con limpieza posterior.</p>
+                        <a href="https://wa.me/34624885319?text=Hola%2C%20necesito%20presupuesto%20para%20un%20servicio%20de%20Poda%20o%20cuidado%20de%20Zonas%20Verdes." class="service-link" target="_blank" rel="noopener noreferrer">
+                            <span>Consultar servicio</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicio 4: Limpieza de Terrenos -->
+                <div class="service-card reveal">
+                    <div class="service-card-image">
+                        <img src="desbroce_terreno.png" alt="Desbroce y limpieza de terrenos" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-icon-wrapper">
+                            <!-- Custom Shovel/Land Cleaning SVG -->
+                            <svg class="service-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 22l6-6"/>
+                                <path d="M9 15l3-3"/>
+                                <path d="M11 13h4v4h-4z"/>
+                                <path d="M15 13l6-6-3-3-6 6"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Limpieza de Terrenos</h3>
+                        <p class="service-text">Desbroce de parcelas, retirada de malas hierbas, maleza y escombros vegetales. Dejamos terrenos preparados para construir o cultivar.</p>
+                        <a href="https://wa.me/34624885319?text=Hola%2C%20quiero%20pedir%20presupuesto%20para%20Limpieza%20de%20un%20Terreno%20o%20Desbroce." class="service-link" target="_blank" rel="noopener noreferrer">
+                            <span>Consultar servicio</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicio 5: Limpieza de Portales -->
+                <div class="service-card reveal">
+                    <div class="service-card-image">
+                        <img src="limpieza_portales.png" alt="Limpieza de Portales comunitarios" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-icon-wrapper">
+                            <!-- Custom Cleaning/Sparkle SVG -->
+                            <svg class="service-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M8 11h8"/>
+                                <path d="M12 7v8"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Limpieza de Portales</h3>
+                        <p class="service-text">Higiene y mantenimiento programado de portales, escaleras, pasamanos y cristales. Mantenemos el acceso a tu vivienda impecable y desinfectado.</p>
+                        <a href="https://wa.me/34624885319?text=Hola%2C%20quiero%20pedir%20presupuesto%20para%20Limpieza%20de%20Portales%20en%20Rivas." class="service-link" target="_blank" rel="noopener noreferrer">
+                            <span>Consultar servicio</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicio 6: Mantenimiento de Comunidades -->
+                <div class="service-card reveal">
+                    <div class="service-card-image">
+                        <img src="mantenimiento_comunidades.png" alt="Mantenimiento integral de comunidades" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-icon-wrapper">
+                            <!-- Custom Community/Building SVG -->
+                            <svg class="service-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 21h18"/>
+                                <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+                                <path d="M9 9h6"/>
+                                <path d="M9 13h6"/>
+                                <path d="M9 17h6"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Mantenimiento de Comunidades</h3>
+                        <p class="service-text">Servicio integral para urbanizaciones y comunidades de vecinos: cuidado de zonas comunes, piscinas, jardines comunitarios y limpiezas programadas.</p>
+                        <a href="https://wa.me/34624885319?text=Hola%2C%20quiero%20pedir%20presupuesto%20para%20Mantenimiento%20Integral%20de%20una%20Comunidad." class="service-link" target="_blank" rel="noopener noreferrer">
+                            <span>Consultar servicio</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ANTES Y DESPUÉS (TRANSFORMACIÓN) -->
+    <section class="transformation-section" id="transformacion">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-subtitle">Resultados reales</span>
+                <h2 class="section-title">Nuestras transformaciones de antes y después</h2>
+                <p class="section-description">Mira con tus propios ojos el cambio. Arrastra la barra central y descubre más casos con estética premium, pensados para enseñar el impacto real de una puesta a punto profesional.</p>
+            </div>
+            
+            <div class="slider-container reveal">
+                <!-- Después (Imagen base) -->
+                <img src="jardin_despues.png" alt="Jardín limpio y verde después del mantenimiento de Jardines Edén" class="slider-img">
+                
+                <!-- Antes (Imagen recortada) -->
+                <div class="slider-before">
+                    <img src="jardin_antes.png" alt="Jardín sucio y desordenado antes del mantenimiento de Jardines Edén" class="slider-img">
+                </div>
+                
+                <!-- Etiquetas de Antes/Después -->
+                <span class="slider-label slider-label-before">Antes</span>
+                <span class="slider-label slider-label-after">Después</span>
+                
+                <!-- Barra del deslizador (Handle) -->
+                <div class="slider-handle">
+                    <div class="slider-handle-button"></div>
+                </div>
+                
+                <!-- Control de rango (Invisible, cubre todo para que sea táctil y arrastrable) -->
+                <input type="range" min="0" max="100" value="50" class="slider-input" id="slider-range" aria-label="Deslizador de antes y después">
+            </div>
+
+            <div class="before-after-grid">
+                <article class="before-after-card reveal">
+                    <div class="before-after-media mini-slider" style="--slider-pos: 50%;">
+                        <div class="mini-slider-layer mini-slider-before">
+                            <img src="antes-despues-jardin-ia.png" alt="Antes de la transformación de un jardín residencial" loading="lazy">
+                        </div>
+                        <div class="mini-slider-layer mini-slider-after">
+                            <img src="antes-despues-jardin-ia.png" alt="Después de la transformación de un jardín residencial" loading="lazy">
+                        </div>
+                        <span class="compare-chip compare-chip-before">Antes</span>
+                        <span class="compare-chip compare-chip-after">Después</span>
+                        <div class="mini-slider-handle" aria-hidden="true">
+                            <span></span>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="slider-input before-after-input" aria-label="Arrastrar comparativa de jardín residencial">
+                    </div>
+                    <div class="before-after-content">
+                        <span class="project-kicker">Jardín residencial</span>
+                        <h3>De espacio apagado a jardín listo para disfrutar</h3>
+                        <p>Perfilado, limpieza, recuperación visual del verde y una composición ordenada para multiplicar la sensación de cuidado.</p>
+                    </div>
+                </article>
+
+                <article class="before-after-card reveal delay-1">
+                    <div class="before-after-media mini-slider" style="--slider-pos: 50%;">
+                        <div class="mini-slider-layer mini-slider-before">
+                            <img src="antes-despues-terreno-ia.png" alt="Antes de la limpieza y desbroce de un terreno" loading="lazy">
+                        </div>
+                        <div class="mini-slider-layer mini-slider-after">
+                            <img src="antes-despues-terreno-ia.png" alt="Después de la limpieza y desbroce de un terreno" loading="lazy">
+                        </div>
+                        <span class="compare-chip compare-chip-before">Antes</span>
+                        <span class="compare-chip compare-chip-after">Después</span>
+                        <div class="mini-slider-handle" aria-hidden="true">
+                            <span></span>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="slider-input before-after-input" aria-label="Arrastrar comparativa de desbroce de terreno">
+                    </div>
+                    <div class="before-after-content">
+                        <span class="project-kicker">Desbroce y parcela</span>
+                        <h3>Terreno despejado, limpio y preparado</h3>
+                        <p>Retirada de maleza, limpieza de perímetros y acabado ordenado para dejar el terreno útil desde el primer día.</p>
+                    </div>
+                </article>
+
+                <article class="before-after-card reveal delay-2">
+                    <div class="before-after-media mini-slider" style="--slider-pos: 50%;">
+                        <div class="mini-slider-layer mini-slider-before">
+                            <img src="antes-despues-comunidad-ia.png" alt="Antes del mantenimiento de una comunidad de vecinos" loading="lazy">
+                        </div>
+                        <div class="mini-slider-layer mini-slider-after">
+                            <img src="antes-despues-comunidad-ia.png" alt="Después del mantenimiento de una comunidad de vecinos" loading="lazy">
+                        </div>
+                        <span class="compare-chip compare-chip-before">Antes</span>
+                        <span class="compare-chip compare-chip-after">Después</span>
+                        <div class="mini-slider-handle" aria-hidden="true">
+                            <span></span>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="slider-input before-after-input" aria-label="Arrastrar comparativa de comunidad de vecinos">
+                    </div>
+                    <div class="before-after-content">
+                        <span class="project-kicker">Comunidad de vecinos</span>
+                        <h3>Entrada más limpia, verde y representativa</h3>
+                        <p>Mantenimiento de zonas comunes, poda ligera y limpieza visual para mejorar la primera impresión del edificio.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE TRABAJOS (REALES) -->
+    <section class="gallery-section" id="trabajos">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-subtitle">Nuestros proyectos</span>
+                <h2 class="section-title">Trabajos reales realizados con dedicación</h2>
+                <p class="section-description">Una muestra visual de nuestro día a día: jardines limpios, mantenimiento profesional y espacios exteriores transformados en Rivas-Vaciamadrid.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                
+                <div class="gallery-item reveal">
+                    <div class="gallery-image-wrapper">
+                        <img src="Captura de pantalla 2026-05-25 193204.png" alt="Desbroce y limpieza de terrenos en Rivas-Vaciamadrid por Jardines Edén" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-zoom-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                </svg>
+                            </span>
+                            <div class="gallery-text">
+                                <h4 class="gallery-item-title">Mantenimiento de Áreas Verdes</h4>
+                                <p class="gallery-item-category">Jardinería Profesional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <div class="gallery-image-wrapper">
+                        <img src="Captura de pantalla 2026-05-25 193222.png" alt="Instalación de riego automático y césped" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-zoom-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                </svg>
+                            </span>
+                            <div class="gallery-text">
+                                <h4 class="gallery-item-title">Puesta a Punto de Riegos</h4>
+                                <p class="gallery-item-category">Riego Eficiente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <div class="gallery-image-wrapper">
+                        <img src="Captura de pantalla 2026-05-25 193230.png" alt="Limpieza y perfilado de zonas verdes residenciales" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-zoom-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                </svg>
+                            </span>
+                            <div class="gallery-text">
+                                <h4 class="gallery-item-title">Mantenimiento de Comunidades</h4>
+                                <p class="gallery-item-category">Zonas Comunes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <div class="gallery-image-wrapper">
+                        <img src="Captura de pantalla 2026-05-25 193239.png" alt="Limpieza de parcelas y cuidado de jardines en Madrid Este" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-zoom-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                </svg>
+                            </span>
+                            <div class="gallery-text">
+                                <h4 class="gallery-item-title">Limpieza y Desbroce</h4>
+                                <p class="gallery-item-category">Acondicionamiento</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX / VISOR DE IMÁGENES -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar vista">&times;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: POR QUÉ ELEGIRNOS -->
+    <section class="why-us-section" id="ventajas">
+        <!-- Organic Fluid Blob Decorator -->
+        <div class="organic-shape-decorator organic-shape-2"></div>
+        
+        <div class="container why-us-container">
+            <div class="why-us-image reveal">
+                <div class="image-stack">
+                    <img src="Captura de pantalla 2026-05-25 193230.png" alt="Cuidado de jardines profesionales en Rivas" class="stack-img stack-img-main">
+                    <div class="experience-card">
+                        <span class="experience-badge">🌿</span>
+                        <div class="experience-info">
+                            <h4 class="experience-title">Compromiso Local</h4>
+                            <p class="experience-desc">Atención en Rivas y Madrid Este</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="why-us-content reveal">
+                <span class="section-subtitle">Tus áreas verdes en buenas manos</span>
+                <h2 class="section-title">¿Por qué confiar en Jardines Edén?</h2>
+                <p class="section-description">Nos tomamos muy en serio el cuidado de tu espacio. Evitamos intermediarios y te ofrecemos un servicio ágil, transparente y de confianza directamente en tu localidad.</p>
+                
+                <div class="why-us-features">
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3 class="feature-title">Atención directa por WhatsApp</h3>
+                            <p class="feature-desc">Olvídate de formularios eternos y esperas. Escríbenos, envíanos una foto de lo que necesitas y te responderemos con rapidez.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3 class="feature-title">Presupuestos personalizados</h3>
+                            <p class="feature-desc">Cada jardín, comunidad o portal es único. Estudiamos tu caso para ofrecerte un precio cerrado adaptado estrictamente a tus necesidades.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3 class="feature-title">Servicio local en Rivas-Vaciamadrid</h3>
+                            <p class="feature-desc">Al estar ubicados en la zona, podemos desplazarnos con agilidad para realizar mantenimientos periódicos o actuaciones puntuales.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3 class="feature-title">Mantenimiento puntual o recurrente</h3>
+                            <p class="feature-desc">¿Una puesta a punto rápida de un terreno o un servicio semanal de cuidado de césped? Nos adaptamos a tu calendario y frecuencia ideal.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION (CTA) -->
+    <section class="cta-section" id="contacto">
+        <div class="container cta-container">
+            <div class="cta-content text-center reveal">
+                <h2 class="cta-title">¿Tu jardín, portal o terreno necesita una puesta a punto?</h2>
+                <p class="cta-description">Cuéntanos qué necesitas y te orientamos con un presupuesto adaptado a tu espacio sin ningún tipo de compromiso.</p>
+                
+                <a href="https://wa.me/34624885319?text=Hola%2C%20he%20visto%20vuestra%20web%20de%20Jardines%20Ed%C3%A9n%20y%20quiero%20pedir%20presupuesto%20para%20un%20servicio%20de%20jardiner%C3%ADa%20o%20mantenimiento." class="btn btn-whatsapp btn-large btn-cta-main" target="_blank" rel="noopener noreferrer" id="btn-cta-wa">
+                    <svg class="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span>Hablar por WhatsApp</span>
+                </a>
+                
+                <div class="cta-extra reveal">
+                    <span>Presupuestos y atención directa por WhatsApp (+34 624 88 53 19)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#inicio" class="footer-logo">
+                    <img src="logo.jpeg" alt="Jardines Edén" class="logo-img-file-footer" onerror="this.style.display='none'; document.getElementById('logo-fallback-footer').style.display='flex';" style="max-height: 40px; width: auto; object-fit: contain;">
+                    <div id="logo-fallback-footer" class="logo-fallback-wrapper" style="display: none; align-items: center; gap: 10px;">
+                        <svg class="logo-icon" width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logo-gradient-footer" x1="0" y1="100" x2="100" y2="0" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#22823a" />
+                                    <stop offset="50%" stop-color="#46a256" />
+                                    <stop offset="100%" stop-color="#8ed094" />
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Regadera -->
+                            <path d="M12 62 H22 V72 H12 Z M22 65 L28 61 V69 L22 67 M10 67 Q6 67 6 70 Q6 73 10 73 H12" stroke="url(#logo-gradient-footer)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            
+                            <!-- Jardinero Silueta -->
+                            <circle cx="58" cy="20" r="7" fill="url(#logo-gradient-footer)"/>
+                            <!-- Sombrero -->
+                            <path d="M42 19 C48 10 68 10 74 19 C64 13 52 13 42 19 Z" fill="url(#logo-gradient-footer)" />
+                            <path d="M34 21 C44 19 68 19 78 21" stroke="url(#logo-gradient-footer)" stroke-width="2.5" stroke-linecap="round" />
+                            <!-- Cuerpo inclinado -->
+                            <path d="M58 27 Q50 38 42 51 T38 72" stroke="url(#logo-gradient-footer)" stroke-width="7" stroke-linecap="round" fill="none" />
+                            <path d="M52 30 Q60 44 54 58 T50 72" stroke="url(#logo-gradient-footer)" stroke-width="6" stroke-linecap="round" fill="none" />
+                            
+                            <!-- Pala -->
+                            <path d="M35 34 L62 58 M62 58 L68 63 L64 67 L58 62" stroke="url(#logo-gradient-footer)" stroke-width="2.5" stroke-linecap="round" />
+                            <!-- Hoja de pala cavando -->
+                            <path d="M64 67 L74 76 C76 78 72 80 70 80 L58 62" stroke="url(#logo-gradient-footer)" stroke-width="2.5" stroke-linecap="round" fill="url(#logo-gradient-footer)" />
+                            
+                            <!-- Planta creciendo -->
+                            <path d="M82 72 V50" stroke="url(#logo-gradient-footer)" stroke-width="2.5" stroke-linecap="round" />
+                            <!-- Hojas de la planta -->
+                            <path d="M82 62 Q87 59 90 62 Q87 65 82 62 Z" fill="url(#logo-gradient-footer)" />
+                            <path d="M82 55 Q77 52 74 55 Q77 58 82 55 Z" fill="url(#logo-gradient-footer)" />
+                            <path d="M82 47 Q85 43 88 45 Q85 48 82 47 Z" fill="url(#logo-gradient-footer)" />
+                        </svg>
+                        <span>Jardines <span class="accent-text">Edén</span></span>
+                    </div>
+                </a>
+                <p class="footer-about">Servicios profesionales de jardinería, desbroce, limpieza y mantenimiento de exteriores para particulares y comunidades de vecinos en Rivas y el este de Madrid.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/jardines_eden_rivas" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram de Jardines Edén">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                        <span>@jardines_eden_rivas</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4 class="footer-title">Nuestros Servicios</h4>
+                <ul>
+                    <li><a href="#servicios">Mantenimiento de Jardines</a></li>
+                    <li><a href="#servicios">Sistemas de Riego Automático</a></li>
+                    <li><a href="#servicios">Poda de Altura y Zonas Verdes</a></li>
+                    <li><a href="#servicios">Limpieza y Desbroce de Terrenos</a></li>
+                    <li><a href="#servicios">Limpieza de Portales y Comunidades</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4 class="footer-title">Contacto Local</h4>
+                <ul>
+                    <li class="contact-info-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Rivas-Vaciamadrid y Madrid Este</span>
+                    </li>
+                    <li class="contact-info-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span>+34 624 88 53 19</span>
+                    </li>
+                </ul>
+                <div class="footer-badge">
+                    <span>Presupuesto personalizado según servicio y zona.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 Jardines Edén. Todos los derechos reservados.</p>
+                <p class="footer-design">Diseñado con dedicación local</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BARRA DE ACCIONES FLOTANTES (WHATSAPP + INSTAGRAM) -->
+    <div class="floating-actions-bar" id="floating-actions">
+        
+        <!-- Botón Flotante Instagram -->
+        <a href="https://www.instagram.com/jardines_eden_rivas" target="_blank" rel="noopener noreferrer" class="instagram-floating-btn" aria-label="Ir a Instagram de Jardines Edén">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+        </a>
+
+        <!-- Botón Flotante WhatsApp con Tooltip -->
+        <div class="whatsapp-floating-wrapper" id="wa-floating">
+            <div class="whatsapp-tooltip" id="wa-tooltip">
+                <span class="tooltip-avatar">🌿</span>
+                <div class="tooltip-text">
+                    <span class="tooltip-name">Jardines Edén</span>
+                    <span class="tooltip-status">¿Necesitas presupuesto? ¡Escríbenos!</span>
+                </div>
+                <button class="tooltip-close" id="wa-tooltip-close" aria-label="Cerrar mensaje">&times;</button>
+            </div>
+            <a href="https://wa.me/34624885319?text=Hola%2C%20he%20visto%20vuestra%20web%20de%20Jardines%20Ed%C3%A9n%20y%20quiero%20pedir%20presupuesto%20para%20un%20servicio%20de%20jardiner%C3%ADa%20o%20mantenimiento." class="whatsapp-floating-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <span class="wa-badge-pulse"></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="app.js"></script>
+</body>
+</html>

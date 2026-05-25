@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Jardines Edén | Jardinería y Mantenimiento en Rivas-Vaciamadrid</title>
+    <meta name="description" content="Detalle de nuestros servicios profesionales en Rivas: Mantenimiento de jardines, riego automático, poda en altura, desbroce, limpieza de terrenos, portales y mantenimiento integral de comunidades.">
+    
+    <!-- Preload & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="main-header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" id="logo-link">
+                <img src="logo.jpeg" alt="Jardines Edén" class="logo-img-file" onerror="this.src='logo.png'; this.onerror=function(){ this.style.display='none'; document.getElementById('logo-fallback').style.display='flex'; };" style="max-height: 52px; width: auto; object-fit: contain;">
+                <div id="logo-fallback" class="logo-fallback-wrapper" style="display: none; align-items: center; gap: 12px;">
+                    <svg class="logo-icon" width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="100" x2="100" y2="0" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#22823a" />
+                                <stop offset="50%" stop-color="#46a256" />
+                                <stop offset="100%" stop-color="#8ed094" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Regadera -->
+                        <path d="M12 62 H22 V72 H12 Z M22 65 L28 61 V69 L22 67 M10 67 Q6 67 6 70 Q6 73 10 73 H12" stroke="url(#logo-gradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        
+                        <!-- Jardinero Silueta -->
+                        <circle cx="58" cy="20" r="7" fill="url(#logo-gradient)"/>
+                        <!-- Sombrero -->
+                        <path d="M42 19 C48 10 68 10 74 19 C64 13 52 13 42 19 Z" fill="url(#logo-gradient)" />
+                        <path d="M34 21 C44 19 68 19 78 21" stroke="url(#logo-gradient)" stroke-width="2.5" stroke-linecap="round" />
+                        <!-- Cuerpo inclinado -->
+                        <path d="M58 27 Q50 38 42 51 T38 72" stroke="url(#logo-gradient)" stroke-width="7" stroke-linecap="round" fill="none" />
+                        <path d="M52 30 Q60 44 54 58 T50 72" stroke="url(#logo-gradient)" stroke-width="6" stroke-linecap="round" fill="none" />
+                        
+                        <!-- Pala -->
+                        <path d="M35 34 L62 58 M62 58 L68 63 L64 67 L58 62" stroke="url(#logo-gradient)" stroke-width="2.5" stroke-linecap="round" />
+                        <!-- Hoja de pala cavando -->
+                        <path d="M64 67 L74 76 C76 78 72 80 70 80 L58 62" stroke="url(#logo-gradient)" stroke-width="2.5" stroke-linecap="round" fill="url(#logo-gradient)" />
+                        
+                        <!-- Planta creciendo -->
+                        <path d="M82 72 V50" stroke="url(#logo-gradient)" stroke-width="2.5" stroke-linecap="round" />
+                        <!-- Hojas de la planta -->
+                        <path d="M82 62 Q87 59 90 62 Q87 65 82 62 Z" fill="url(#logo-gradient)" />
+                        <path d="M82 55 Q77 52 74 55 Q77 58 82 55 Z" fill="url(#logo-gradient)" />
+                        <path d="M82 47 Q85 43 88 45 Q85 48 82 47 Z" fill="url(#logo-gradient)" />
+                    </svg>
+                    <span class="logo-text">Jardines <span class="accent-text">Edén</span></span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="servicios.html" class="nav-link active">Servicios</a></li>
+                    <li><a href="index.html#trabajos" class="nav-link">Trabajos</a></li>
+                    <li><a href="porque-elegirnos.html" class="nav-link">Por qué elegirnos</a></li>
+                    <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="https://wa.me/34624885319?text=Hola%2C%20he%20visto%20vuestra%20web%20de%20Jardines%20Ed%C3%A9n%20y%20quiero%20pedir%20presupuesto%20para%20un%20servicio%20de%20jardiner%C3%ADa%20o%20mantenimiento." class="btn btn-primary btn-header" target="_blank" rel="noopener noreferrer" id="btn-header-cta">
+                    <span>Pedir Presupuesto</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación" aria-controls="nav-menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SUBPAGE HERO BANNER -->
+    <section class="subpage-hero">
+        <!-- Hojas flotantes decorativas animadas -->
+        <div class="leaf-particle">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17 8C8 14 4 19 4 19S9 19 15 12C17 9.5 19.5 5 19.5 5S19.5 5 17 8Z" />
+            </svg>
+        </div>
+        <div class="leaf-particle">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17 8C8 14 4 19 4 19S9 19 15 12C17 9.5 19.5 5 19.5 5S19.5 5 17 8Z" />
+            </svg>
+        </div>
+        <div class="leaf-particle">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17 8C8 14 4 19 4 19S9 19 15 12C17 9.5 19.5 5 19.5 5S19.5 5 17 8Z" />
+            </svg>
+        </div>
+        <div class="container subpage-hero-container">
+            <span class="section-subtitle">Qué ofrecemos</span>
+            <h1 class="section-title">Servicios profesionales de jardinería y mantenimiento</h1>
+            <p class="section-description">Cuidamos al detalle tus áreas verdes, comunidades, portales y terrenos en Rivas-Vaciamadrid y el este de Madrid. Calidad garantizada directamente por WhatsApp.</p>
+        </div>
+    </section>
+
+    <!-- DETAILED SERVICES SECTION -->
+    <section class="services-detail-section">
+        <!-- Organic Fluid Blob Decorators -->
+        <div class="organic-shape-decorator organic-shape-1"></div>
+        <div class="organic-shape-decorator organic-shape-2"></div>
+        
+        <div class="container">
+            
+            <!-- 1. Mantenimiento de Jardines -->
+            <div class="service-detail-block reveal">
+                <div class="service-detail-image-wrapper">
+                    <img src="jardin_despues.png" alt="Mantenimiento de jardines en Rivas Vaciamadrid">
+                </div>
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">Mantenimiento de Jardines</h2>
+                    <p class="service-detail-text">Diseñamos un plan de cuidado continuo adaptado al ciclo natural de tu jardín. Nos encargamos de mantener el césped denso, verde y saludable, realizar los tratamientos de nutrición idóneos y prever cualquier plaga.</p>
+                    <div class="service-detail-features">
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Corte y perfilado de césped</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Abonado orgánico y mineral</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Escarificado y aireado</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Control fitosanitario preventivo</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/34624885319?text=Hola%2C%20quiero%20pedir%20presupuesto%20para%20Mantenimiento%20de%20Jardines%20en%20Rivas." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <span>Pedir presupuesto por WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. Riego Automático -->
+            <div class="service-detail-block reveal">
+                <div class="service-detail-image-wrapper">
+                    <img src="riego_automatico.png" alt="Instalación y puesta a punto de sistemas de riego automático">
+                </div>
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">Sistemas de Riego Automático</h2>
+                    <p class="service-detail-text">Un riego mal planificado consume agua en exceso y daña tus plantas. Nos encargamos de diseñar e instalar sistemas de riego automatizados por goteo o aspersión eficientes, o de reparar y ajustar las tuberías, electroválvulas y programadores de tu sistema actual.</p>
+                    <div class="service-detail-features">
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Instalación de aspersión y goteo</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Programación por estaciones y temporadas</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Detección y reparación de fugas</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Sustitución de electroválvulas y toberas</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/34624885319?text=Hola%2C%20quiero%20pedir%20presupuesto%20para%20instalaci%C3%B3n%20o%20reparaci%C3%B3n%20de%20Riego%20Autom%C3%A1tico." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <span>Pedir presupuesto por WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. Poda y Cuidado de Zonas Verdes -->
+            <div class="service-detail-block reveal">
+                <div class="service-detail-image-wrapper">
+                    <img src="poda_altura.png" alt="Poda de setos y saneamiento de zonas verdes">
+                </div>
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">Poda y Cuidado de Zonas Verdes</h2>
+                    <p class="service-detail-text">La poda es esencial tanto para la salud del árbol o seto como para la seguridad de tu hogar. Realizamos podas de saneamiento, podas de formación en setos para darles un aspecto impecable, y saneamientos especiales retirando las ramas secas o peligrosas.</p>
+                    <div class="service-detail-features">
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Perfilado estético de setos</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Poda de saneamiento de ramas secas</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Poda en altura y desrame de seguridad</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Retirada y triturado ecológico de restos</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/34624885319?text=Hola%2C%20necesito%20presupuesto%20para%20un%20servicio%20de%20Poda%20o%20cuidado%20de%20Zonas%20Verdes." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <span>Pedir presupuesto por WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4. Limpieza de Terrenos -->
+            <div class="service-detail-block reveal">
+                <div class="service-detail-image-wrapper">
+                    <img src="desbroce_terreno.png" alt="Desbroce y limpieza de parcelas y terrenos en Madrid Este">
+                </div>
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">Limpieza y Desbroce de Terrenos</h2>
+                    <p class="service-detail-text">Los terrenos baldíos o parcelas descuidadas acumulan maleza y aumentan el riesgo de incendios y plagas. Ofrecemos desbroces mecánicos de alta eficacia para limpiar por completo tu parcela, solar o zona rústica, dejándola nivelada, segura y lista.</p>
+                    <div class="service-detail-features">
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Desbroce mecánico de vegetación densa</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Retirada de malas hierbas de raíz</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Recogida y gestión de residuos verdes</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Acondicionamiento y allanado preventivo</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/34624885319?text=Hola%2C%20quiero%20pedir%20presupuesto%20para%20Limpieza%20de%20un%20Terreno%20o%20Desbroce." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <span>Pedir presupuesto por WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 5. Limpieza de Portales -->
+            <div class="service-detail-block reveal">
+                <div class="service-detail-image-wrapper">
+                    <img src="limpieza_portales.png" alt="Higiene y mantenimiento de portales comunitarios">
+                </div>
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">Limpieza de Portales</h2>
+                    <p class="service-detail-text">La primera impresión de tu comunidad de vecinos empieza en el portal. Realizamos tareas de mantenimiento exhaustivas y periódicas en portales, rellanos, escaleras, zonas comunes interiores, cristales y pasamanos para asegurar una higiene impecable.</p>
+                    <div class="service-detail-features">
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Barrido y fregado de suelos y rellanos</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Limpieza profunda de barandillas y cristales</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Desinfección de ascensores y buzones</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Frecuencia y horarios adaptables</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/34624885319?text=Hola%2C%20quiero%20pedir%20presupuesto%20para%20Limpieza%20de%20Portales%20en%20Rivas." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <span>Pedir presupuesto por WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 6. Mantenimiento de Comunidades -->
+            <div class="service-detail-block reveal">
+                <div class="service-detail-image-wrapper">
+                    <img src="mantenimiento_comunidades.png" alt="Mantenimiento integral de comunidades y zonas comunes residenciales">
+                </div>
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">Mantenimiento de Comunidades</h2>
+                    <p class="service-detail-text">Diseñamos soluciones todo en uno para urbanizaciones, mancomunidades y pequeños bloques residenciales. Gestionamos simultáneamente la limpieza interior de los portales, el desbroce periódico, el cuidado exhaustivo de los jardines comunitarios y el óptimo estado de los caminos exteriores.</p>
+                    <div class="service-detail-features">
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Atención unificada de jardines y portales</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Limpieza de calzadas y patios comunes</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Supervisión de riegos comunitarios</span>
+                        </div>
+                        <div class="service-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Precios consolidados y transparentes</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/34624885319?text=Hola%2C%20quiero%20pedir%20presupuesto%20para%20Mantenimiento%20Integral%20de%20una%20Comunidad." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <span>Pedir presupuesto por WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION (CTA) -->
+    <section class="cta-section" id="contacto">
+        <div class="container cta-container">
+            <div class="cta-content text-center reveal">
+                <h2 class="cta-title">¿Quieres un presupuesto adaptado sin compromiso?</h2>
+                <p class="cta-description">Cuéntanos qué necesita tu espacio (jardín, portal, comunidad o solar) y te daremos una propuesta a medida directamente.</p>
+                
+                <a href="https://wa.me/34624885319?text=Hola%2C%20he%20visto%20vuestra%20web%20de%20Jardines%20Ed%C3%A9n%20y%20quiero%20pedir%20presupuesto%20para%20un%20servicio%20de%20jardiner%C3%ADa%20o%20mantenimiento." class="btn btn-whatsapp btn-large btn-cta-main" target="_blank" rel="noopener noreferrer" id="btn-cta-wa">
+                    <svg class="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span>Hablar por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="logo.jpeg" alt="Jardines Edén" class="logo-img-file-footer" onerror="this.style.display='none'; document.getElementById('logo-fallback-footer').style.display='flex';" style="max-height: 40px; width: auto; object-fit: contain;">
+                    <div id="logo-fallback-footer" class="logo-fallback-wrapper" style="display: none; align-items: center; gap: 10px;">
+                        <svg class="logo-icon" width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logo-gradient-footer" x1="0" y1="100" x2="100" y2="0" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#22823a" />
+                                    <stop offset="50%" stop-color="#46a256" />
+                                    <stop offset="100%" stop-color="#8ed094" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M12 62 H22 V72 H12 Z M22 65 L28 61 V69 L22 67 M10 67 Q6 67 6 70 Q6 73 10 73 H12" stroke="url(#logo-gradient-footer)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="58" cy="20" r="7" fill="url(#logo-gradient-footer)"/>
+                            <path d="M42 19 C48 10 68 10 74 19 C64 13 52 13 42 19 Z" fill="url(#logo-gradient-footer)" />
+                            <path d="M34 21 C44 19 68 19 78 21" stroke="url(#logo-gradient-footer)" stroke-width="2.5" stroke-linecap="round" />
+                            <path d="M58 27 Q50 38 42 51 T38 72" stroke="url(#logo-gradient-footer)" stroke-width="7" stroke-linecap="round" fill="none" />
+                            <path d="M52 30 Q60 44 54 58 T50 72" stroke="url(#logo-gradient-footer)" stroke-width="6" stroke-linecap="round" fill="none" />
+                            <path d="M35 34 L62 58 M62 58 L68 63 L64 67 L58 62" stroke="url(#logo-gradient-footer)" stroke-width="2.5" stroke-linecap="round" />
+                            <path d="M64 67 L74 76 C76 78 72 80 70 80 L58 62" stroke="url(#logo-gradient-footer)" stroke-width="2.5" stroke-linecap="round" fill="url(#logo-gradient-footer)" />
+                            <path d="M82 72 V50" stroke="url(#logo-gradient-footer)" stroke-width="2.5" stroke-linecap="round" />
+                            <path d="M82 62 Q87 59 90 62 Q87 65 82 62 Z" fill="url(#logo-gradient-footer)" />
+                            <path d="M82 55 Q77 52 74 55 Q77 58 82 55 Z" fill="url(#logo-gradient-footer)" />
+                            <path d="M82 47 Q85 43 88 45 Q85 48 82 47 Z" fill="url(#logo-gradient-footer)" />
+                        </svg>
+                        <span>Jardines <span class="accent-text">Edén</span></span>
+                    </div>
+                </a>
+                <p class="footer-about">Servicios profesionales de jardinería, desbroce, limpieza y mantenimiento de exteriores para particulares y comunidades de vecinos en Rivas y el este de Madrid.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/jardines_eden_rivas" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram de Jardines Edén">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                        <span>@jardines_eden_rivas</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4 class="footer-title">Nuestros Servicios</h4>
+                <ul>
+                    <li><a href="servicios.html">Mantenimiento de Jardines</a></li>
+                    <li><a href="servicios.html">Sistemas de Riego Automático</a></li>
+                    <li><a href="servicios.html">Poda de Altura y Zonas Verdes</a></li>
+                    <li><a href="servicios.html">Limpieza y Desbroce de Terrenos</a></li>
+                    <li><a href="servicios.html">Limpieza de Portales y Comunidades</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4 class="footer-title">Contacto Local</h4>
+                <ul>
+                    <li class="contact-info-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Rivas-Vaciamadrid y Madrid Este</span>
+                    </li>
+                    <li class="contact-info-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span>+34 624 88 53 19</span>
+                    </li>
+                </ul>
+                <div class="footer-badge">
+                    <span>Presupuesto personalizado según servicio y zona.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 Jardines Edén. Todos los derechos reservados.</p>
+                <p class="footer-design">Diseñado con dedicación local</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BARRA DE ACCIONES FLOTANTES (WHATSAPP + INSTAGRAM) -->
+    <div class="floating-actions-bar" id="floating-actions">
+        <!-- Botón Flotante Instagram -->
+        <a href="https://www.instagram.com/jardines_eden_rivas" target="_blank" rel="noopener noreferrer" class="instagram-floating-btn" aria-label="Ir a Instagram de Jardines Edén">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+        </a>
+
+        <!-- Botón Flotante WhatsApp -->
+        <div class="whatsapp-floating-wrapper" id="wa-floating">
+            <div class="whatsapp-tooltip" id="wa-tooltip">
+                <span class="tooltip-avatar">🌿</span>
+                <div class="tooltip-text">
+                    <span class="tooltip-name">Jardines Edén</span>
+                    <span class="tooltip-status">¿Necesitas presupuesto? ¡Escríbenos!</span>
+                </div>
+                <button class="tooltip-close" id="wa-tooltip-close" aria-label="Cerrar mensaje">&times;</button>
+            </div>
+            <a href="https://wa.me/34624885319?text=Hola%2C%20he%20visto%20vuestra%20web%20de%20Jardines%20Ed%C3%A9n%20y%20quiero%20pedir%20presupuesto%20para%20un%20servicio%20de%20jardiner%C3%ADa%20o%20mantenimiento." class="whatsapp-floating-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <span class="wa-badge-pulse"></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+</html>
