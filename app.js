@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const img = item.querySelector('img');
                     const title = item.querySelector('.gallery-item-title');
                     const category = item.querySelector('.gallery-item-category');
+                    const description = item.querySelector('.gallery-description');
 
                     if (img) {
                         lightboxImg.src = img.src;
@@ -136,7 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         // Set caption
                         const titleText = title ? title.textContent : '';
                         const catText = category ? ` (${category.textContent})` : '';
-                        lightboxCaption.textContent = titleText + catText;
+                        const descText = description ? ` - ${description.textContent}` : '';
+                        lightboxCaption.textContent = titleText + catText + descText;
 
                         // Open Lightbox
                         lightbox.classList.add('active');
@@ -209,7 +211,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         /* ==========================================
-           7. BEFORE & AFTER SLIDER
+           7. REAL TRANSFORMATION PROCESS SLIDER
+           ========================================== */
+        const processSlider = document.querySelector('[data-process-slider]');
+
+        if (processSlider) {
+            const processSlides = Array.from(processSlider.querySelectorAll('.process-slide'));
+            const processDots = Array.from(processSlider.querySelectorAll('[data-process-dot]'));
+            const processPrev = processSlider.querySelector('[data-process-prev]');
+            const processNext = processSlider.querySelector('[data-process-next]');
+            let processIndex = 0;
+
+            const showProcessSlide = (nextIndex) => {
+                if (!processSlides.length) return;
+
+                processIndex = (nextIndex + processSlides.length) % processSlides.length;
+
+                processSlides.forEach((slide, index) => {
+                    slide.classList.toggle('active', index === processIndex);
+                });
+
+                processDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === processIndex);
+                });
+            };
+
+            if (processPrev) {
+                processPrev.addEventListener('click', () => showProcessSlide(processIndex - 1));
+            }
+
+            if (processNext) {
+                processNext.addEventListener('click', () => showProcessSlide(processIndex + 1));
+            }
+
+            processDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => showProcessSlide(index));
+            });
+
+            showProcessSlide(0);
+        }
+
+        /* ==========================================
+           8. BEFORE & AFTER SLIDER
            ========================================== */
         const beforeAfterSliders = document.querySelectorAll('.slider-container, .mini-slider');
 
