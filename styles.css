@@ -1526,6 +1526,15 @@ body.js-active .delay-3 { transition-delay: 0.45s; }
     visibility: visible;
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .whatsapp-floating-wrapper:hover .whatsapp-tooltip,
+    .whatsapp-floating-wrapper:focus-within .whatsapp-tooltip {
+        transform: scale(1) translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 .whatsapp-tooltip::after {
     content: '';
     position: absolute;

@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxClose = document.getElementById('lightbox-close');
         const lightboxCaption = document.getElementById('lightbox-caption');
+        const transparentPixel = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 
         if (lightbox && lightboxImg && galleryItems.length > 0) {
             galleryItems.forEach(item => {
@@ -151,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 lightbox.classList.remove('active');
                 document.body.style.overflow = ''; // Unlock scroll
                 setTimeout(() => {
-                    lightboxImg.src = '';
+                    lightboxImg.src = transparentPixel;
                     lightboxCaption.textContent = '';
                 }, 300);
             };
@@ -174,38 +175,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         /* ==========================================
-           6. TIMED WHATSAPP TOOLTIP FLOATING INVITATION
+           6. WHATSAPP TOOLTIP FLOATING INVITATION
            ========================================== */
         const waTooltip = document.getElementById('wa-tooltip');
         const waTooltipClose = document.getElementById('wa-tooltip-close');
 
         if (waTooltip) {
-            // Safe SessionStorage wrap to prevent security crashes in static file: URI
-            let isTooltipClosed = false;
-            try {
-                isTooltipClosed = sessionStorage.getItem('wa_tooltip_closed') === 'true';
-            } catch (e) {
-                console.warn("sessionStorage is blocked or inaccessible.", e);
-            }
-
-            if (!isTooltipClosed) {
-                setTimeout(() => {
-                    waTooltip.classList.add('active');
-                }, 3000);
-            }
-
             // Close tooltip event
             if (waTooltipClose) {
                 waTooltipClose.addEventListener('click', (e) => {
                     e.preventDefault();
                     e.stopPropagation(); // Avoid triggering parent actions
                     waTooltip.classList.remove('active');
-                    
-                    try {
-                        sessionStorage.setItem('wa_tooltip_closed', 'true');
-                    } catch (err) {
-                        console.warn("Unable to save closed state in sessionStorage.", err);
-                    }
                 });
             }
         }
