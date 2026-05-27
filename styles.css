@@ -2867,22 +2867,40 @@ body.has-promo .hero-section {
         height: 56px;
     }
 
+    /* En móvil: ocultar logo.jpeg (fondo negro visible) y mostrar SVG + texto */
     .main-header .logo-img-file {
-        max-height: 40px !important;
-        width: 40px;
-        height: 40px;
+        display: none;
     }
-
+    .main-header #logo-fallback {
+        display: flex !important; /* Sobrescribe inline style="display:none" */
+        align-items: center;
+        gap: 8px;
+    }
+    .main-header .logo-icon {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+    }
     .logo-text {
-        font-size: 17px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
     }
 
     .btn-header {
         display: none !important;
     }
 
+    /* Hamburguesa con acento verde premium */
     .mobile-toggle {
         display: flex;
+        background: rgba(31, 125, 53, 0.14);
+        border-color: rgba(157, 229, 164, 0.25);
+        box-shadow: 0 0 0 1px rgba(157, 229, 164, 0.08) inset;
+    }
+    .mobile-toggle .bar {
+        width: 20px;
+        height: 2px;
     }
 
     /* MOBILE NAV PANEL — Premium drawer */
@@ -3283,8 +3301,13 @@ body.has-promo .hero-section {
         padding: 0 !important;
     }
 
-    .logo-img-file {
-        max-width: 146px;
+    /* Logo-text más compacto en pantallas pequeñas */
+    .main-header .logo-text {
+        font-size: 15px;
+    }
+    .main-header .logo-icon {
+        width: 28px;
+        height: 28px;
     }
 
     .hero-content,
@@ -3395,6 +3418,14 @@ body.has-promo .hero-section {
     .header-container {
         width: 100%;
         padding: 0;
+    }
+
+    .main-header .logo-text {
+        font-size: 14px;
+    }
+    .main-header .logo-icon {
+        width: 26px;
+        height: 26px;
     }
 
     .logo-img-file {
