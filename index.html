@@ -6,6 +6,9 @@
     <title>Jardines Edén | Jardinería y Mantenimiento en Madrid</title>
     <meta name="description" content="Jardines Edén ofrece servicios profesionales de jardinería, instalación y reparación de riego automático, poda, limpieza de terrenos, portales y mantenimiento de comunidades en Madrid capital, área metropolitana y toda la provincia. ¡Pide tu presupuesto personalizado por WhatsApp!">
     
+    <!-- Preload hero (LCP) — WebP preferred, JPEG fallback for older browsers -->
+    <link rel="preload" as="image" href="hero-jardin-premium.webp" type="image/webp" fetchpriority="high">
+
     <!-- Preload & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +21,34 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
 </head>
 <body>
+
+    <!-- ANNOUNCEMENT BAR / PROMO -->
+    <div class="promo-bar" id="promo-bar" role="region" aria-label="Promoción activa">
+        <div class="promo-bar-inner">
+            <span class="promo-bar-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                    <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                Oferta
+            </span>
+            <span class="promo-bar-text">
+                <strong>−10% de descuento</strong> en la contratación de tu <strong>primer servicio</strong>
+            </span>
+            <a href="https://wa.me/34624885319?text=Hola%2C%20he%20visto%20vuestra%20oferta%20del%20-10%25%20en%20el%20primer%20servicio%20y%20quiero%20pedir%20presupuesto." class="promo-bar-cta" target="_blank" rel="noopener noreferrer">
+                Lo quiero
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M13 5l7 7-7 7"/>
+                </svg>
+            </a>
+            <button class="promo-bar-close" id="promo-bar-close" aria-label="Cerrar promoción">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+    </div>
 
     <!-- HEADER & NAVIGATION -->
     <header class="main-header" id="header">
@@ -99,7 +130,10 @@
     <!-- HERO SECTION -->
     <section class="hero-section" id="inicio">
         <div class="hero-background">
-            <img src="hero-jardin-premium.jpg" alt="Jardinería profesional y mantenimiento de espacios verdes en la provincia de Madrid" class="hero-bg-img">
+            <picture>
+                <source srcset="hero-jardin-premium.webp" type="image/webp">
+                <img src="hero-jardin-premium.jpg" alt="Jardinería profesional y mantenimiento de espacios verdes en la provincia de Madrid" class="hero-bg-img" width="1400" height="2100" fetchpriority="high" decoding="async">
+            </picture>
             <div class="hero-overlay"></div>
         </div>
         
@@ -126,15 +160,31 @@
         </div>
         <div class="container hero-container">
             <div class="hero-content reveal">
+                <!-- Promo destacada (encima del título para máxima visibilidad) -->
+                <a href="https://wa.me/34624885319?text=Hola%2C%20he%20visto%20vuestra%20oferta%20del%20-10%25%20en%20el%20primer%20servicio%20y%20quiero%20pedir%20presupuesto." class="hero-promo" target="_blank" rel="noopener noreferrer" aria-label="Promoción: 10 por ciento de descuento en el primer servicio">
+                    <span class="hero-promo-discount">
+                        <span class="hero-promo-sign">−</span>10<span class="hero-promo-percent">%</span>
+                    </span>
+                    <span class="hero-promo-body">
+                        <span class="hero-promo-eyebrow">Solo para nuevos clientes</span>
+                        <span class="hero-promo-title">Descuento en tu primer servicio</span>
+                    </span>
+                    <span class="hero-promo-arrow" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14M13 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+
                 <div class="badge-tag">
                     <span class="badge-dot"></span>
                     <span class="badge-text">Jardinería y mantenimiento exterior</span>
                 </div>
                 <h1 class="hero-title">Espacios verdes impecables para hogares y comunidades</h1>
                 <p class="hero-subtitle">Mantenimiento profesional de jardines, riego, poda y desbroce en Madrid capital, Coslada, San Sebastián de los Reyes, Getafe y toda la provincia.</p>
-                
+
                 <div class="hero-actions">
-                    <a href="https://wa.me/34624885319?text=Hola%2C%20he%20visto%20vuestra%20web%20de%20Jardines%20Ed%C3%A9n%20y%20quiero%20pedir%20presupuesto%20para%20un%20servicio%20de%20jardiner%C3%ADa%20o%20mantenimiento." class="btn btn-whatsapp btn-large" target="_blank" rel="noopener noreferrer" id="btn-hero-wa">
+                    <a href="https://wa.me/34624885319?text=Hola%2C%20he%20visto%20vuestra%20web%20de%20Jardines%20Ed%C3%A9n%20y%20quiero%20pedir%20presupuesto%20para%20un%20servicio%20de%20jardiner%C3%ADa%20o%20mantenimiento%20(me%20interesa%20el%20-10%25%20del%20primer%20servicio)." class="btn btn-whatsapp btn-large" target="_blank" rel="noopener noreferrer" id="btn-hero-wa">
                         <svg class="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                         </svg>

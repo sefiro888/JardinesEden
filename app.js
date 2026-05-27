@@ -13,6 +13,41 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('js-active');
 
         /* ==========================================
+           0. PROMO BAR (announcement)
+           ========================================== */
+        const promoBar = document.getElementById('promo-bar');
+        const promoClose = document.getElementById('promo-bar-close');
+        const PROMO_DISMISS_KEY = 'jardineseden_promo_dismissed_v1';
+
+        const measurePromo = () => {
+            if (!promoBar || promoBar.classList.contains('is-closed')) {
+                document.documentElement.style.setProperty('--promo-bar-height', '0px');
+                document.body.classList.remove('has-promo');
+                return;
+            }
+            const h = promoBar.offsetHeight;
+            document.documentElement.style.setProperty('--promo-bar-height', h + 'px');
+            document.body.classList.add('has-promo');
+        };
+
+        if (promoBar) {
+            // Honor previous dismissal
+            if (sessionStorage.getItem(PROMO_DISMISS_KEY) === '1') {
+                promoBar.classList.add('is-closed');
+            }
+            measurePromo();
+            window.addEventListener('resize', measurePromo);
+
+            if (promoClose) {
+                promoClose.addEventListener('click', () => {
+                    promoBar.classList.add('is-closed');
+                    try { sessionStorage.setItem(PROMO_DISMISS_KEY, '1'); } catch (_) {}
+                    measurePromo();
+                });
+            }
+        }
+
+        /* ==========================================
            1. MOBILE MENU TOGGLE
            ========================================== */
         const mobileToggle = document.getElementById('mobile-toggle');

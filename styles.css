@@ -235,6 +235,348 @@ body.js-active .delay-3 { transition-delay: 0.45s; }
     transform: translateY(-2px);
 }
 
+/* 4.5 ANNOUNCEMENT / PROMO BAR */
+.promo-bar {
+    position: relative;
+    z-index: 1001;
+    background:
+        radial-gradient(120% 200% at 100% 0%, rgba(157, 229, 164, 0.18) 0%, transparent 60%),
+        linear-gradient(90deg, #0a1a0e 0%, #112d18 50%, #0a1a0e 100%);
+    color: #ffffff;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(157, 229, 164, 0.15);
+    animation: promoSlideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes promoSlideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.promo-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(110deg, transparent 0%, rgba(157, 229, 164, 0.18) 50%, transparent 100%);
+    transform: skewX(-20deg);
+    animation: promoShine 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes promoShine {
+    0%, 100% { left: -50%; opacity: 0; }
+    50% { left: 110%; opacity: 1; }
+}
+
+.promo-bar-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-family: var(--font-display);
+    font-size: 13.5px;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+.promo-bar-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    background: linear-gradient(135deg, #2a9444 0%, #1f7d35 100%);
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(15, 75, 30, 0.45), 0 0 0 1px rgba(157, 229, 164, 0.25);
+    flex-shrink: 0;
+}
+
+.promo-bar-text {
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.promo-bar-text strong {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.promo-bar-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(157, 229, 164, 0.3);
+    border-radius: 999px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 13px;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+.promo-bar-cta:hover {
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
+    border-color: var(--color-accent);
+    transform: translateY(-1px);
+}
+
+.promo-bar-cta svg { transition: transform 0.3s ease; }
+.promo-bar-cta:hover svg { transform: translateX(3px); }
+
+.promo-bar-close {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.6);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.promo-bar-close:hover {
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+}
+
+.promo-bar.is-closed {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .promo-bar-inner {
+        padding: 8px 40px 8px 14px;
+        gap: 8px;
+        font-size: 12.5px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    .promo-bar-badge {
+        padding: 3px 8px;
+        font-size: 10px;
+    }
+    .promo-bar-text {
+        flex: 1;
+        min-width: 0;
+        font-size: 12.5px;
+        line-height: 1.25;
+    }
+    .promo-bar-cta {
+        padding: 5px 10px;
+        font-size: 12px;
+        flex-shrink: 0;
+    }
+    .promo-bar-cta svg { display: none; }
+    .promo-bar-close { right: 8px; width: 24px; height: 24px; }
+}
+
+@media (max-width: 460px) {
+    .promo-bar-inner { gap: 6px; padding: 7px 36px 7px 10px; }
+    .promo-bar-badge svg { display: none; }
+    .promo-bar-text { font-size: 12px; }
+    .promo-bar-text strong:last-of-type { display: none; } /* hide "primer servicio" repetición */
+    .promo-bar-cta { padding: 4px 9px; font-size: 11.5px; }
+}
+
+/* HERO PROMO BADGE — destacado dentro del hero */
+.hero-promo {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 22px 12px 14px;
+    margin: 0 0 20px;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.06) 100%);
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    border: 1px solid rgba(157, 229, 164, 0.35);
+    border-radius: 999px;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.15) inset,
+        0 18px 38px -10px rgba(0, 0, 0, 0.4),
+        0 0 28px rgba(82, 184, 104, 0.18);
+    color: #ffffff;
+    text-align: left;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.hero-promo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.18) 50%, transparent 100%);
+    transform: skewX(-20deg);
+    transition: left 0.8s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-promo:hover {
+    transform: translateY(-2px);
+    border-color: rgba(157, 229, 164, 0.55);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.2) inset,
+        0 24px 50px -10px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(82, 184, 104, 0.32);
+}
+
+.hero-promo:hover::before { left: 130%; }
+
+.hero-promo-discount {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    min-width: 76px;
+    padding: 10px 14px;
+    background: linear-gradient(135deg, #f5d76e 0%, #e8b923 50%, #c08e0e 100%);
+    color: #2a1a00;
+    border-radius: 999px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.45) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.18) inset,
+        0 8px 20px rgba(192, 142, 14, 0.45),
+        0 0 0 1px rgba(255, 220, 130, 0.45);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+    flex-shrink: 0;
+    animation: promoPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes promoPulse {
+    0%, 100% { box-shadow: 0 1px 0 rgba(255, 255, 255, 0.45) inset, 0 -1px 0 rgba(0, 0, 0, 0.18) inset, 0 8px 20px rgba(192, 142, 14, 0.45), 0 0 0 1px rgba(255, 220, 130, 0.45), 0 0 0 0 rgba(245, 215, 110, 0.6); }
+    50%      { box-shadow: 0 1px 0 rgba(255, 255, 255, 0.45) inset, 0 -1px 0 rgba(0, 0, 0, 0.18) inset, 0 8px 20px rgba(192, 142, 14, 0.45), 0 0 0 1px rgba(255, 220, 130, 0.45), 0 0 0 14px rgba(245, 215, 110, 0); }
+}
+
+.hero-promo-sign {
+    font-size: 22px;
+    margin-right: 1px;
+}
+
+.hero-promo-percent {
+    font-size: 16px;
+    margin-left: 2px;
+    font-weight: 700;
+}
+
+.hero-promo-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.2;
+}
+
+.hero-promo-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+}
+
+.hero-promo-title {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.hero-promo-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero-promo:hover .hero-promo-arrow {
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
+    transform: translateX(3px);
+}
+
+@media (max-width: 600px) {
+    .hero-promo {
+        gap: 12px;
+        padding: 10px 16px 10px 10px;
+        margin: 18px auto 22px;
+    }
+    .hero-promo-discount {
+        font-size: 22px;
+        min-width: 64px;
+        padding: 8px 10px;
+    }
+    .hero-promo-sign { font-size: 18px; }
+    .hero-promo-percent { font-size: 14px; }
+    .hero-promo-title { font-size: 13.5px; }
+    .hero-promo-eyebrow { font-size: 10px; }
+    .hero-promo-arrow { width: 24px; height: 24px; }
+}
+
+/* Header se separa del promo bar (era fixed con top:20px) */
+body.has-promo .main-header {
+    top: calc(20px + var(--promo-bar-height, 44px));
+}
+
+body.has-promo .main-header.scrolled {
+    top: 12px;
+}
+
+/* Hero gana padding extra cuando hay promo bar para no quedar pegado al header */
+body.has-promo .hero-section {
+    padding-top: calc(138px + var(--promo-bar-height, 44px));
+}
+
+@media (max-width: 900px) {
+    body.has-promo .main-header {
+        top: calc(12px + var(--promo-bar-height, 56px));
+    }
+    body.has-promo .main-header.scrolled {
+        top: 8px;
+    }
+    body.has-promo .nav-menu {
+        top: calc(84px + var(--promo-bar-height, 56px));
+    }
+    body.has-promo .main-header.scrolled ~ * .nav-menu,
+    body.has-promo:not(.has-promo) .nav-menu {
+        top: 84px;
+    }
+}
+
 /* 5. HEADER & NAVIGATION — Premium Glass Bar */
 .main-header {
     position: fixed;
@@ -2983,18 +3325,31 @@ body.js-active .delay-3 { transition-delay: 0.45s; }
     }
 
     .floating-actions-bar {
-        right: auto;
-        left: min(300px, calc(100vw - 84px));
-        align-items: flex-start;
+        right: 16px;
+        bottom: 20px;
+        left: auto;
+        align-items: flex-end;
+        gap: 10px;
     }
 
     .instagram-floating-btn {
-        display: none;
+        width: 48px;
+        height: 48px;
+    }
+
+    .instagram-floating-btn svg {
+        width: 24px;
+        height: 24px;
     }
 
     .whatsapp-floating-btn {
         width: 56px;
         height: 56px;
+    }
+
+    .whatsapp-floating-btn svg {
+        width: 28px;
+        height: 28px;
     }
 
     .whatsapp-tooltip {
