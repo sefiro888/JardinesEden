@@ -533,7 +533,16 @@ body.js-active .delay-3 { transition-delay: 0.45s; }
     .hero-promo {
         gap: 12px;
         padding: 10px 16px 10px 10px;
-        margin: 18px auto 22px;
+        margin: 18px 0 22px;
+        /* Fondo semisólido para que se vea sobre el hero oscuro */
+        background: rgba(4, 30, 10, 0.72);
+        backdrop-filter: blur(14px) saturate(140%);
+        -webkit-backdrop-filter: blur(14px) saturate(140%);
+        border-color: rgba(157, 229, 164, 0.45);
+        box-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.1) inset,
+            0 12px 28px -8px rgba(0, 0, 0, 0.5),
+            0 0 0 1px rgba(82, 184, 104, 0.18);
     }
     .hero-promo-discount {
         font-size: 22px;
@@ -3333,6 +3342,7 @@ body.has-promo .hero-section {
     }
 
     .instagram-floating-btn {
+        display: flex !important; /* Forzar visible en móvil */
         width: 48px;
         height: 48px;
     }
