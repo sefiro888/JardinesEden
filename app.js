@@ -270,6 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         /* ==========================================
            8. BEFORE & AFTER SLIDER
            ========================================== */
+
         const beforeAfterSliders = document.querySelectorAll('.slider-container, .mini-slider');
 
         beforeAfterSliders.forEach(slider => {
@@ -282,6 +283,78 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+
+        /* ==========================================
+           9. ANIMACIÓN DE NÚMEROS (STATS COUNTER)
+           ========================================== */
+        const statNumbers = document.querySelectorAll('[data-count]');
+
+        if ('IntersectionObserver' in window && statNumbers.length > 0) {
+            const countObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const target = parseInt(el.dataset.count, 10);
+                        const suffix = el.dataset.suffix || '';
+                        const duration = 1600;
+                        const startTime = performance.now();
+
+                        const tick = (now) => {
+                            const elapsed = now - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+                            // Ease out cubic
+                            const eased = 1 - Math.pow(1 - progress, 3);
+                            el.textContent = Math.round(eased * target) + suffix;
+                            if (progress < 1) requestAnimationFrame(tick);
+                        };
+
+                        requestAnimationFrame(tick);
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.6 });
+
+            statNumbers.forEach(el => countObserver.observe(el));
+        }
+
+        /* ==========================================
+           10. BANNER DE COOKIES (RGPD)
+           ========================================== */
+        const COOKIE_CONSENT_KEY = 'jardineseden_cookies_v1';
+
+        if (!localStorage.getItem(COOKIE_CONSENT_KEY)) {
+            const cookieBanner = document.createElement('div');
+            cookieBanner.id = 'cookie-banner';
+            cookieBanner.className = 'cookie-banner';
+            cookieBanner.setAttribute('role', 'dialog');
+            cookieBanner.setAttribute('aria-label', 'Aviso de cookies');
+            cookieBanner.innerHTML = `
+                <div class="cookie-banner-inner">
+                    <div class="cookie-banner-text">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                        <p>Usamos cookies propias para mejorar tu experiencia. Consulta nuestra <a href="politica-privacidad.html" class="cookie-link">política de privacidad</a>.</p>
+                    </div>
+                    <div class="cookie-banner-actions">
+                        <button id="cookie-btn-reject" class="cookie-btn cookie-btn-secondary">Solo esenciales</button>
+                        <button id="cookie-btn-accept" class="cookie-btn cookie-btn-primary">Aceptar todo</button>
+                    </div>
+                </div>`;
+            document.body.appendChild(cookieBanner);
+
+            // Animate in after a short delay
+            setTimeout(() => cookieBanner.classList.add('cookie-banner--visible'), 800);
+
+            const dismissCookieBanner = (choice) => {
+                try { localStorage.setItem(COOKIE_CONSENT_KEY, choice); } catch (_) {}
+                cookieBanner.classList.remove('cookie-banner--visible');
+                setTimeout(() => { try { cookieBanner.remove(); } catch (_) {} }, 400);
+            };
+
+            const btnAccept = document.getElementById('cookie-btn-accept');
+            const btnReject = document.getElementById('cookie-btn-reject');
+            if (btnAccept) btnAccept.addEventListener('click', () => dismissCookieBanner('all'));
+            if (btnReject) btnReject.addEventListener('click', () => dismissCookieBanner('essential'));
+        }
 
     } catch (globalError) {
         console.error("Jardines Edén global JS runtime caught:", globalError);

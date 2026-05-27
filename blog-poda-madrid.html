@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuándo podar en Madrid: guía por estaciones | Blog Jardines Edén</title>
+    <meta name="description" content="Descubre cuándo es el mejor momento para podar tus árboles, arbustos y setos en Madrid según la especie y la época del año. Guía práctica de Jardines Edén.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+</head>
+<body>
+
+    <!-- PROMO BAR -->
+    <div class="promo-bar" id="promo-bar" role="region" aria-label="Promoción activa">
+        <div class="promo-bar-inner">
+            <span class="promo-bar-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Oferta</span>
+            <span class="promo-bar-text"><strong>−10% de descuento</strong> en tu <strong>primer servicio</strong></span>
+            <a href="https://wa.me/34624885319?text=Hola%2C%20quiero%20pedir%20presupuesto%20de%20poda." class="promo-bar-cta" target="_blank" rel="noopener noreferrer">Lo quiero <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <button class="promo-bar-close" id="promo-bar-close" aria-label="Cerrar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="main-header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" id="logo-link">
+                <img src="logo.jpeg" alt="Jardines Edén" class="logo-img-file" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';" style="max-height: 52px; width: auto; object-fit: contain;">
+                <div id="logo-fallback" class="logo-fallback-wrapper" style="display: none; align-items: center; gap: 12px;">
+                    <svg class="logo-icon" width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lg" x1="0" y1="100" x2="100" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#22823a"/><stop offset="50%" stop-color="#46a256"/><stop offset="100%" stop-color="#8ed094"/></linearGradient></defs><circle cx="58" cy="20" r="7" fill="url(#lg)"/><path d="M58 27 Q50 38 42 51 T38 72" stroke="url(#lg)" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M82 72 V50" stroke="url(#lg)" stroke-width="2.5" stroke-linecap="round"/><path d="M82 62 Q87 59 90 62 Q87 65 82 62 Z" fill="url(#lg)"/></svg>
+                    <span class="logo-text">Jardines <span class="accent-text">Edén</span></span>
+                </div>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                    <li><a href="index.html#trabajos" class="nav-link">Trabajos</a></li>
+                    <li><a href="porque-elegirnos.html" class="nav-link">Por qué elegirnos</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="mobile-cta-divider"></div>
+                <a href="https://wa.me/34624885319" class="mobile-cta" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span>Pedir presupuesto</span></a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://wa.me/34624885319" class="btn btn-primary btn-header" target="_blank" rel="noopener noreferrer"><span>Pedir Presupuesto</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú" aria-controls="nav-menu" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARTICLE -->
+    <main class="blog-article-page">
+        <div class="container blog-article-container">
+
+            <nav class="blog-breadcrumb" aria-label="Ruta de navegación">
+                <a href="index.html">Inicio</a>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+                <a href="blog.html">Blog</a>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+                <span>Cuándo podar en Madrid</span>
+            </nav>
+
+            <article class="blog-article">
+                <header class="blog-article-header">
+                    <span class="blog-card-category">Poda</span>
+                    <h1 class="blog-article-title">Cuándo podar en Madrid: guía completa por estaciones</h1>
+                    <div class="blog-article-meta">
+                        <time datetime="2026-04-15">Abril 2026</time>
+                        <span>·</span>
+                        <span>5 min de lectura</span>
+                        <span>·</span>
+                        <span>Por el equipo de Jardines Edén</span>
+                    </div>
+                </header>
+
+                <div class="blog-article-body">
+                    <p class="blog-article-lead">La poda es una de las tareas más importantes del mantenimiento de jardines, pero también una de las más mal realizadas. Hacerla en el momento equivocado puede debilitar las plantas, favorecer enfermedades o, en el peor caso, matarlas. En Madrid, con su clima continental seco, los tiempos son especialmente importantes.</p>
+
+                    <h2>¿Por qué importa el momento de la poda?</h2>
+                    <p>Cada planta tiene ciclos de vida propios. Podar durante la floración elimina los brotes del año; podar en pleno verano bajo el sol madrileño genera estrés hídrico. La clave está en actuar en los momentos de menor actividad o justo después de la floración.</p>
+
+                    <h2>Poda por estaciones en Madrid</h2>
+
+                    <h3>🌱 Primavera (marzo – mayo)</h3>
+                    <p>Es el momento de mayor actividad. En primavera se realizan podas de formación en arbustos de floración otoñal e invernal, ya que han terminado su ciclo. También es el momento ideal para podar rosales y eliminar madera muerta. <strong>Evita podar árboles en floración</strong> como los cerezos o almendros.</p>
+
+                    <h3>☀️ Verano (junio – agosto)</h3>
+                    <p>En Madrid el verano es extremo: temperaturas de 38-40 °C son habituales en julio. En esta época <strong>se limita a podas de mantenimiento leve</strong>: recorte de setos para mantener forma y eliminación de ramas secas o enfermas. Evitar cortes grandes que expongan zonas de la planta al sol directo.</p>
+
+                    <h3>🍂 Otoño (septiembre – noviembre)</h3>
+                    <p>El otoño madrileño es la segunda ventana de actuación. Temperatura más suave, sin heladas. Ideal para la poda de árboles frutales, limpieza de caducifolios antes de que pierdan la hoja y recorte de palmeras. <strong>La poda de palmeras en otoño reduce el riesgo del picudo rojo.</strong></p>
+
+                    <h3>❄️ Invierno (diciembre – febrero)</h3>
+                    <p>Para la mayoría de especies caducifolias, el invierno (cuando están en reposo vegetativo) es el mejor momento para poda drástica. Sin hojas se ve mejor la estructura, las heridas cicatrizan antes en primavera y hay menos riesgo de enfermedades fúngicas. <strong>Ideal para olivos, moreras, tilos y árboles ornamentales de hoja caduca.</strong></p>
+
+                    <h2>Guía rápida por especie</h2>
+                    <ul>
+                        <li><strong>Rosales:</strong> febrero – marzo, antes de que brote</li>
+                        <li><strong>Lavanda:</strong> tras la floración, agosto – septiembre</li>
+                        <li><strong>Setos (aligustre, boj):</strong> primavera y otoño, evitar verano</li>
+                        <li><strong>Olivos:</strong> final de invierno – principios de primavera</li>
+                        <li><strong>Frutales:</strong> invierno en reposo vegetativo</li>
+                        <li><strong>Palmeras:</strong> otoño para prevenir el picudo rojo</li>
+                        <li><strong>Coníferas:</strong> primavera, solo poda de mantenimiento suave</li>
+                    </ul>
+
+                    <h2>¿Necesitas ayuda profesional?</h2>
+                    <p>Si tienes dudas sobre cuándo o cómo podar en tu caso concreto, en Jardines Edén evaluamos tu jardín y te recomendamos el plan de mantenimiento más adecuado. Cubrimos Madrid capital, Coslada, Rivas-Vaciamadrid, San Sebastián de los Reyes, Getafe y toda la provincia.</p>
+                </div>
+
+                <div class="blog-article-cta">
+                    <p>¿Quieres que nos encarguemos de la poda de tu jardín?</p>
+                    <a href="https://wa.me/34624885319?text=Hola%2C%20he%20leído%20el%20artículo%20sobre%20poda%20y%20quiero%20un%20presupuesto." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Pedir presupuesto de poda
+                    </a>
+                    <a href="blog.html" class="btn btn-secondary">← Volver al blog</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- FLOATING BUTTONS -->
+    <div class="floating-actions-bar" id="floating-actions">
+        <a href="https://www.instagram.com/jardines_eden_rivas" target="_blank" rel="noopener noreferrer" class="instagram-floating-btn" aria-label="Instagram de Jardines Edén"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <div class="whatsapp-floating-wrapper" id="wa-floating">
+            <div class="whatsapp-tooltip" id="wa-tooltip"><span class="tooltip-avatar">🌿</span><div class="tooltip-text"><span class="tooltip-name">Jardines Edén</span><span class="tooltip-status">¿Necesitas presupuesto?</span></div><button class="tooltip-close" id="wa-tooltip-close" aria-label="Cerrar">&times;</button></div>
+            <a href="https://wa.me/34624885319" class="whatsapp-floating-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-badge-pulse"></span></a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
