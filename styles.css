@@ -1284,9 +1284,78 @@ body.has-promo .hero-section {
 
 .service-card:hover .service-icon-wrapper {
     background-color: var(--color-primary);
-    color: var(--color-bg-white);
     transform: translateY(-4px) scale(1.06);
     box-shadow: var(--shadow-glow);
+}
+
+/* ====== EMOJIS DE SERVICIO CON ANIMACIONES ====== */
+.service-emoji {
+    font-size: 32px;
+    line-height: 1;
+    display: inline-block;
+    transform-origin: center;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.08));
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* 1. Jardines: crece suavemente */
+@keyframes grow {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50%      { transform: translateY(-3px) scale(1.08); }
+}
+.emoji-grow { animation-name: grow; animation-duration: 3.2s; }
+
+/* 2. Riego: gota cae rebotando */
+@keyframes drop {
+    0%, 100% { transform: translateY(0); }
+    40%      { transform: translateY(-4px); }
+    60%      { transform: translateY(2px) scaleY(0.92); }
+    80%      { transform: translateY(0) scaleY(1); }
+}
+.emoji-drop { animation-name: drop; animation-duration: 2.4s; }
+
+/* 3. Poda: tijeras cortando */
+@keyframes cut {
+    0%, 100% { transform: rotate(0deg); }
+    35%      { transform: rotate(-12deg); }
+    70%      { transform: rotate(8deg); }
+}
+.emoji-cut { animation-name: cut; animation-duration: 2.2s; }
+
+/* 4. Tractor: avanza vibrando */
+@keyframes drive {
+    0%, 100% { transform: translateX(-3px) translateY(0); }
+    25%      { transform: translateX(0) translateY(-1px); }
+    50%      { transform: translateX(3px) translateY(0); }
+    75%      { transform: translateX(0) translateY(-1px); }
+}
+.emoji-drive { animation-name: drive; animation-duration: 2.6s; }
+
+/* 5. Escoba: barre de un lado a otro */
+@keyframes sweep {
+    0%, 100% { transform: rotate(-15deg); }
+    50%      { transform: rotate(15deg); }
+}
+.emoji-sweep { animation-name: sweep; animation-duration: 2s; }
+
+/* 6. Comunidad: pulso suave */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.08); }
+}
+.emoji-pulse { animation-name: pulse; animation-duration: 2.8s; }
+
+/* En hover de la card, intensifica la animación */
+.service-card:hover .service-emoji {
+    animation-duration: 1.2s;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+/* Respeta usuarios que prefieren reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+    .service-emoji { animation: none !important; }
 }
 
 .service-title {
@@ -4863,6 +4932,147 @@ body.has-promo .hero-section {
 }
 
 .legal-cta .btn { margin: 6px; }
+
+.legal-notice-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fffbeb;
+    border: 1px solid #f59e0b;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 16px 0 24px;
+    font-size: 14px;
+    color: #78350f;
+}
+
+.legal-notice-box svg { color: #f59e0b; flex-shrink: 0; margin-top: 1px; }
+.legal-notice-box p { margin: 0; }
+
+/* ==========================================================================
+   21. FAQ SECTION
+   ========================================================================== */
+
+.faq-section {
+    padding: 96px 0;
+    background: linear-gradient(180deg, #ffffff 0%, var(--color-primary-lightest) 100%);
+}
+
+.faq-list {
+    max-width: 820px;
+    margin: 56px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-item[open] {
+    border-color: rgba(82, 184, 104, 0.35);
+    box-shadow: 0 6px 20px -8px rgba(15, 75, 30, 0.18);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 18px 22px;
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    list-style: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::marker { display: none; content: ''; }
+
+.faq-question:hover {
+    background: var(--color-primary-lightest);
+}
+
+.faq-item[open] .faq-question {
+    color: var(--color-primary);
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary-lightest);
+    color: var(--color-primary);
+    border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, color 0.25s ease;
+}
+
+.faq-item[open] .faq-icon {
+    transform: rotate(-180deg);
+    background: var(--color-primary);
+    color: #ffffff;
+}
+
+.faq-answer {
+    padding: 0 22px 20px;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+    animation: faqSlide 0.28s ease;
+}
+
+.faq-answer p { margin: 0 0 10px; }
+.faq-answer p:last-child { margin-bottom: 0; }
+.faq-answer a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+@keyframes faqSlide {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.faq-cta {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.faq-cta p {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+    .faq-section { padding: 64px 0; }
+    .faq-list { margin-top: 36px; gap: 10px; }
+    .faq-question {
+        padding: 16px 16px;
+        font-size: 14.5px;
+        gap: 12px;
+    }
+    .faq-icon { width: 28px; height: 28px; }
+    .faq-icon svg { width: 16px; height: 16px; }
+    .faq-answer {
+        padding: 0 16px 16px;
+        font-size: 14px;
+    }
+}
 
 @media (max-width: 600px) {
     .legal-page { padding: 56px 0 72px; }

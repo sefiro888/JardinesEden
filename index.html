@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jardines Edén | Jardinería y Mantenimiento en Madrid</title>
     <meta name="description" content="Jardines Edén ofrece servicios profesionales de jardinería, instalación y reparación de riego automático, poda, limpieza de terrenos, portales y mantenimiento de comunidades en Madrid capital, área metropolitana y toda la provincia. ¡Pide tu presupuesto personalizado por WhatsApp!">
-    
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Jardines Edén">
+    <meta name="geo.region" content="ES-M">
+    <meta name="geo.placename" content="Madrid">
+    <link rel="canonical" href="https://jardineseden.es/">
+
     <!-- Preload hero (LCP) — WebP preferred, JPEG fallback for older browsers -->
     <link rel="preload" as="image" href="hero-jardin-premium.webp" type="image/webp" fetchpriority="high">
 
@@ -16,9 +21,177 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Favicon (Fallback Leaf SVG) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Open Graph (preview al compartir en WhatsApp / redes) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jardines Edén">
+    <meta property="og:url" content="https://jardineseden.es/">
+    <meta property="og:title" content="Jardines Edén | Jardinería y Mantenimiento en Madrid">
+    <meta property="og:description" content="Mantenimiento profesional de jardines, riego, poda y limpieza en Madrid capital y provincia. Presupuesto sin compromiso por WhatsApp. −10% en tu primer servicio.">
+    <meta property="og:image" content="https://jardineseden.es/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jardines Edén | Jardinería en Madrid">
+    <meta name="twitter:description" content="Mantenimiento profesional de jardines en Madrid. −10% en tu primer servicio.">
+    <meta name="twitter:image" content="https://jardineseden.es/og-image.jpg">
+
+    <!-- Schema.org LocalBusiness (SEO local) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "GardeningService"],
+      "@id": "https://jardineseden.es/#business",
+      "name": "Jardines Edén",
+      "alternateName": "Jardines Eden Madrid",
+      "url": "https://jardineseden.es/",
+      "logo": "https://jardineseden.es/favicon-512.png",
+      "image": [
+        "https://jardineseden.es/og-image.jpg",
+        "https://jardineseden.es/hero-jardin-premium.jpg"
+      ],
+      "description": "Servicios profesionales de jardinería, poda, riego automático, desbroce y mantenimiento de comunidades en Madrid capital, área metropolitana y provincia.",
+      "telephone": "+34624885319",
+      "email": "info@jardineseden.es",
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Bank Transfer, Bizum",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Madrid",
+        "addressRegion": "Madrid",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.4167754,
+        "longitude": -3.7037902
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Madrid", "sameAs": "https://es.wikipedia.org/wiki/Madrid"},
+        {"@type": "City", "name": "Coslada"},
+        {"@type": "City", "name": "Rivas-Vaciamadrid"},
+        {"@type": "City", "name": "San Sebastián de los Reyes"},
+        {"@type": "City", "name": "Getafe"},
+        {"@type": "City", "name": "Alcobendas"},
+        {"@type": "City", "name": "Torrejón de Ardoz"},
+        {"@type": "City", "name": "Alcalá de Henares"},
+        {"@type": "City", "name": "Leganés"},
+        {"@type": "City", "name": "Móstoles"},
+        {"@type": "City", "name": "Pozuelo de Alarcón"},
+        {"@type": "City", "name": "Majadahonda"},
+        {"@type": "City", "name": "Las Rozas"},
+        {"@type": "City", "name": "Arganda del Rey"},
+        {"@type": "AdministrativeArea", "name": "Comunidad de Madrid"}
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.4167754,
+          "longitude": -3.7037902
+        },
+        "geoRadius": "50000"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de jardinería y mantenimiento",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mantenimiento de jardines",
+              "description": "Corte de césped, perfilado de setos, abonado, control de plagas y cuidado continuo de jardines en Madrid."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Riego automático",
+              "description": "Diseño, instalación y reparación de sistemas de riego por goteo y aspersión."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Poda y cuidado de zonas verdes",
+              "description": "Poda de altura, perfilado de setos, saneamiento de árboles y eliminación de ramas."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Desbroce y limpieza de terrenos",
+              "description": "Desbroce de parcelas, retirada de maleza y preparación de terrenos en Madrid."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Limpieza de portales",
+              "description": "Limpieza programada de portales, escaleras y zonas comunes de comunidades."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mantenimiento integral de comunidades",
+              "description": "Cuidado de zonas comunes, piscinas y jardines comunitarios para urbanizaciones."
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.instagram.com/jardines_eden_rivas"
+      ]
+    }
+    </script>
+
+    <!-- Schema.org FAQ (SEO bonus para Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "¿El presupuesto tiene algún coste?", "acceptedAnswer": {"@type": "Answer", "text": "No, el presupuesto es totalmente gratuito y sin compromiso."}},
+        {"@type": "Question", "name": "¿Trabajáis los fines de semana?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Trabajamos también sábados y, según disponibilidad, algunos domingos."}},
+        {"@type": "Question", "name": "¿Retiráis los restos del trabajo?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, la retirada de restos vegetales y la limpieza final están incluidas en el precio."}},
+        {"@type": "Question", "name": "¿En qué zonas trabajáis?", "acceptedAnswer": {"@type": "Answer", "text": "Cubrimos Madrid capital, Coslada, Rivas-Vaciamadrid, San Sebastián de los Reyes, Getafe, Alcobendas, Torrejón de Ardoz, Alcalá de Henares, Leganés, Móstoles y toda la zona metropolitana."}},
+        {"@type": "Question", "name": "¿Cuánto cuesta un servicio?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del tipo de trabajo, tamaño y dificultad. Como referencia, un mantenimiento puntual de jardín pequeño puede partir desde 40-50 €."}},
+        {"@type": "Question", "name": "¿Cuánto tardáis en responder?", "acceptedAnswer": {"@type": "Answer", "text": "Respondemos en menos de 24 horas, normalmente en pocas horas si nos escribes en horario laboral."}}
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -100,6 +273,7 @@
                     <li><a href="index.html#trabajos" class="nav-link">Trabajos</a></li>
                     <li><a href="porque-elegirnos.html" class="nav-link">Por qué elegirnos</a></li>
                     <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
                     <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
                 </ul>
                 <div class="mobile-cta-divider"></div>
@@ -269,14 +443,7 @@
                     </div>
                     <div class="service-card-content">
                         <div class="service-icon-wrapper">
-                            <!-- Custom Garden SVG -->
-                            <svg class="service-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2a15 15 0 0 0-3 9 3 3 0 0 0 6 0 15 15 0 0 0-3-9z"/>
-                                <path d="M3 22h18"/>
-                                <path d="M12 12v10"/>
-                                <path d="M5 14a4 4 0 0 1 4-4"/>
-                                <path d="M19 14a4 4 0 0 0-4-4"/>
-                            </svg>
+                            <span class="service-emoji emoji-grow" role="img" aria-label="Planta">🌱</span>
                         </div>
                         <h3 class="service-title">Mantenimiento de Jardines</h3>
                         <p class="service-text">Corte de césped, perfilado de setos, abonado, control preventivo de plagas y cuidado continuo para que tu jardín luzca impecable todo el año.</p>
@@ -294,14 +461,7 @@
                     </div>
                     <div class="service-card-content">
                         <div class="service-icon-wrapper">
-                            <!-- Custom Water/Irrigation SVG -->
-                            <svg class="service-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2v20"/>
-                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                                <circle cx="12" cy="2" r="1" fill="currentColor"/>
-                                <path d="M12 6a3 3 0 0 1 3-3"/>
-                                <path d="M12 10a3 3 0 0 0-3-3"/>
-                            </svg>
+                            <span class="service-emoji emoji-drop" role="img" aria-label="Gota de agua">💧</span>
                         </div>
                         <h3 class="service-title">Riego Automático</h3>
                         <p class="service-text">Diseño, instalación y puesta a punto de sistemas de riego por goteo o aspersión. Programación eficiente para optimizar el consumo de agua.</p>
@@ -319,13 +479,7 @@
                     </div>
                     <div class="service-card-content">
                         <div class="service-icon-wrapper">
-                            <!-- Custom Pruning/Scissors SVG -->
-                            <svg class="service-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="6" cy="6" r="3"/>
-                                <circle cx="6" cy="18" r="3"/>
-                                <line x1="9.8" y1="8.5" x2="20" y2="17"/>
-                                <line x1="9.8" y1="15.5" x2="20" y2="7"/>
-                            </svg>
+                            <span class="service-emoji emoji-cut" role="img" aria-label="Tijeras de poda">✂️</span>
                         </div>
                         <h3 class="service-title">Poda y Cuidado de Zonas Verdes</h3>
                         <p class="service-text">Poda de altura, perfilado de setos, saneamiento de árboles y arbustos. Eliminación segura de ramas peligrosas o secas con limpieza posterior.</p>
@@ -343,13 +497,7 @@
                     </div>
                     <div class="service-card-content">
                         <div class="service-icon-wrapper">
-                            <!-- Custom Shovel/Land Cleaning SVG -->
-                            <svg class="service-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M2 22l6-6"/>
-                                <path d="M9 15l3-3"/>
-                                <path d="M11 13h4v4h-4z"/>
-                                <path d="M15 13l6-6-3-3-6 6"/>
-                            </svg>
+                            <span class="service-emoji emoji-drive" role="img" aria-label="Tractor">🚜</span>
                         </div>
                         <h3 class="service-title">Limpieza de Terrenos</h3>
                         <p class="service-text">Desbroce de parcelas, retirada de malas hierbas, maleza y escombros vegetales. Dejamos terrenos preparados para construir o cultivar.</p>
@@ -367,12 +515,7 @@
                     </div>
                     <div class="service-card-content">
                         <div class="service-icon-wrapper">
-                            <!-- Custom Cleaning/Sparkle SVG -->
-                            <svg class="service-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                <path d="M8 11h8"/>
-                                <path d="M12 7v8"/>
-                            </svg>
+                            <span class="service-emoji emoji-sweep" role="img" aria-label="Escoba">🧹</span>
                         </div>
                         <h3 class="service-title">Limpieza de Portales</h3>
                         <p class="service-text">Higiene y mantenimiento programado de portales, escaleras, pasamanos y cristales. Mantenemos el acceso a tu vivienda impecable y desinfectado.</p>
@@ -390,14 +533,7 @@
                     </div>
                     <div class="service-card-content">
                         <div class="service-icon-wrapper">
-                            <!-- Custom Community/Building SVG -->
-                            <svg class="service-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M3 21h18"/>
-                                <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
-                                <path d="M9 9h6"/>
-                                <path d="M9 13h6"/>
-                                <path d="M9 17h6"/>
-                            </svg>
+                            <span class="service-emoji emoji-pulse" role="img" aria-label="Casas">🏘️</span>
                         </div>
                         <h3 class="service-title">Mantenimiento de Comunidades</h3>
                         <p class="service-text">Servicio integral para urbanizaciones y comunidades de vecinos: cuidado de zonas comunes, piscinas, jardines comunitarios y limpiezas programadas.</p>
@@ -849,6 +985,109 @@
         </div>
     </section>
 
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-subtitle"><span class="subtitle-dot"></span>Resolvemos tus dudas</span>
+                <h2 class="section-title">Preguntas <span class="title-accent">frecuentes</span></h2>
+                <p class="section-description">Lo que más nos preguntan antes de pedirnos un presupuesto.</p>
+            </div>
+
+            <div class="faq-list reveal">
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>¿El presupuesto tiene algún coste?</span>
+                        <span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>No, el presupuesto es <strong>totalmente gratuito y sin compromiso</strong>. Te damos un precio cerrado adaptado a tu espacio. Solo si lo aceptas se factura el servicio.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>¿Trabajáis los fines de semana?</span>
+                        <span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Sí. Trabajamos también <strong>sábados y, según disponibilidad, algunos domingos</strong>. Si necesitas un servicio urgente o fuera del horario habitual, escríbenos por WhatsApp y lo organizamos.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>¿Retiráis los restos del trabajo (hojas, ramas, escombros)?</span>
+                        <span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Por supuesto. <strong>La retirada de restos vegetales y la limpieza final están incluidas</strong> en el precio del servicio. Dejamos tu jardín, terreno o portal completamente limpio cuando terminamos.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>¿En qué zonas trabajáis?</span>
+                        <span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Cubrimos <strong>Madrid capital, Coslada, Rivas-Vaciamadrid, San Sebastián de los Reyes, Getafe, Alcobendas, Torrejón de Ardoz, Alcalá de Henares, Leganés, Móstoles</strong> y toda la zona metropolitana. Consulta <a href="#cobertura">el mapa de cobertura</a> o escríbenos si no ves tu municipio.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>¿Cuánto cuesta un servicio?</span>
+                        <span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Depende del tipo de trabajo, el tamaño y la dificultad. <strong>Cada presupuesto es personalizado</strong>: estudiamos tu caso para darte un precio cerrado justo. Como referencia, un mantenimiento puntual de jardín pequeño puede partir desde 40-50 €. Pídenos presupuesto sin compromiso por WhatsApp.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>¿Hacéis mantenimiento periódico o solo trabajos puntuales?</span>
+                        <span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Las dos cosas. <strong>Ofrecemos servicios puntuales</strong> (una poda, una puesta a punto, un desbroce…) <strong>y contratos de mantenimiento regular</strong> semanales, quincenales o mensuales, ideales para comunidades de vecinos, urbanizaciones y particulares con jardín grande.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>¿Cuánto tardáis en responder?</span>
+                        <span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Respondemos <strong>en menos de 24 horas</strong>, normalmente en pocas horas si nos escribes en horario laboral. Por WhatsApp puedes mandarnos fotos del jardín o terreno y agilizamos el presupuesto.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>¿Trabajáis con comunidades de vecinos?</span>
+                        <span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Sí, una parte importante de nuestros clientes son comunidades. <strong>Atendemos a administradores de fincas y presidentes</strong> con contratos de mantenimiento periódico de zonas verdes, podas estacionales, riego y limpieza de portales.</p>
+                    </div>
+                </details>
+
+            </div>
+
+            <div class="faq-cta reveal">
+                <p>¿No encuentras tu respuesta?</p>
+                <a href="https://wa.me/34624885319?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20vuestros%20servicios." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Pregúntanos por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- CALL TO ACTION (CTA) -->
     <section class="cta-section" id="contacto">
         <div class="container cta-container">
@@ -963,9 +1202,11 @@
             <div class="container footer-bottom-container">
                 <p>&copy; 2026 Jardines Edén. Todos los derechos reservados.</p>
                 <div class="footer-legal-links">
-                    <a href="politica-privacidad.html">Política de privacidad</a>
+                    <a href="aviso-legal.html">Aviso legal</a>
                     <span>·</span>
-                    <a href="politica-privacidad.html#cookies">Política de cookies</a>
+                    <a href="politica-privacidad.html">Privacidad</a>
+                    <span>·</span>
+                    <a href="politica-privacidad.html#cookies">Cookies</a>
                 </div>
             </div>
         </div>

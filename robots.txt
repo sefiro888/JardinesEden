@@ -1,0 +1,12 @@
+# robots.txt — Jardines Edén
+# https://jardineseden.es
+
+User-agent: *
+Allow: /
+
+# Bloqueamos rutas técnicas si las hubiera
+Disallow: /*.json$
+Disallow: /.well-known/
+
+# Sitemap
+Sitemap: https://jardineseden.es/sitemap.xml
