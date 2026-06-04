@@ -50,9 +50,16 @@
 
   <url>
     <loc>https://jardineseden.es/blog-mantenimiento-comunidades.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jardineseden.es/blog-poda-rosales-madrid.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
