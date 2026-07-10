@@ -4962,7 +4962,7 @@ body.has-promo .hero-section {
 
 /* Blog article page */
 .blog-article-page {
-    padding: 56px 0 96px;
+    padding: 150px 0 96px;
     background: #ffffff;
     min-height: 80vh;
 }
@@ -5351,7 +5351,95 @@ body.has-promo .hero-section {
     .legal-page { padding: 56px 0 72px; }
     .legal-cta { padding: 20px 18px; }
     .blog-article-cta { padding: 20px 18px; }
-    .blog-article-page { padding: 40px 0 72px; }
+    .blog-article-page { padding: 135px 0 72px; }
 }
 
 
+
+/* ============ DOBLE ENLACE EN TARJETAS DE SERVICIO (Home) ============ */
+.service-links-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    margin-top: 4px;
+}
+.service-links-row .service-link {
+    justify-content: center;
+    padding: 11px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease, color .25s ease;
+}
+/* Botón principal: WhatsApp (relleno verde) */
+.service-links-row .service-link-wa {
+    background: linear-gradient(135deg, var(--color-whatsapp) 0%, #159c48 100%);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, .3);
+}
+.service-links-row .service-link-wa:hover,
+.service-card:hover .service-link-wa {
+    color: #fff;
+}
+.service-links-row .service-link-wa:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(37, 211, 102, .45);
+}
+.service-card:hover .service-link-wa svg {
+    transform: scale(1.12);
+}
+/* Botón secundario: Ver planes y detalles (borde que se rellena) */
+.service-links-row .service-link-detail {
+    border: 1.5px solid var(--color-primary);
+    color: var(--color-primary);
+    background: transparent;
+}
+.service-card:hover .service-link-detail {
+    color: var(--color-primary);
+}
+.service-links-row .service-link-detail:hover {
+    background: var(--color-primary);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(23, 96, 40, .25);
+}
+.service-links-row .service-link-detail:hover svg {
+    transform: translateX(4px);
+}
+
+/* ============ BOTÓN "VER PLANES Y DETALLES" EN SERVICIOS.HTML ============ */
+.service-detail-content .btn {
+    margin-top: 10px;
+}
+.service-detail-content .btn + .btn {
+    margin-left: 12px;
+}
+.btn-detail-link {
+    background: transparent;
+    border: 1.5px solid var(--color-primary);
+    color: var(--color-primary);
+    transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease, color .25s ease;
+}
+.btn-detail-link svg {
+    transition: transform .25s ease;
+}
+.btn-detail-link:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(23, 96, 40, .25);
+}
+.btn-detail-link:hover svg {
+    transform: translateX(4px);
+}
+@media (max-width: 640px) {
+    .service-detail-content .btn {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .service-detail-content .btn + .btn {
+        margin-left: 0;
+    }
+}
